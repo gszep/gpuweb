@@ -4,12 +4,7 @@
 
 - [Technical Work](https://github.com/gpuweb/gpuweb)
 - [Administrivia](https://github.com/gpuweb/admin) - charters, etc
-
-## Proposals/Experiments
-
-- [Apple](https://github.com/gpuweb/proposals/WebGPU-Apple)
-- Google [Chromium](https://github.com/gpuweb/nxt-chromium)
-- Google [Standalone](https://github.com/gpuweb/nxt-standalone)
+- [Proposals and Experiments](https://github.com/gpuweb/gpuweb/wiki/)
 
 ## Miscellaneous
 
