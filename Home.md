@@ -4,7 +4,7 @@
 
 - [Technical Work](https://github.com/gpuweb/gpuweb)
 - [Administrivia](https://github.com/gpuweb/admin) - charters, etc
-- [Proposals and Experiments](https://github.com/gpuweb/gpuweb/wiki/)
+- [Proposals and Experiments](https://github.com/gpuweb/gpuweb/wiki/Proposals---Experiments)
 
 ## Miscellaneous
 
