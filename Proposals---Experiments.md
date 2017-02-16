@@ -1,1 +1,7 @@
-- foo
+Here are some proposals or experiments in the area:
+
+- [Apple](https://github.com/gpuweb/proposals/WebGPU-Apple)
+- Google [Chromium](https://github.com/gpuweb/nxt-chromium)
+- Google [Standalone](https://github.com/gpuweb/nxt-standalone)
+
+Feel free to link to any other similar items you see. Maybe we should also have a page linking to discussions/critiques of content here?
