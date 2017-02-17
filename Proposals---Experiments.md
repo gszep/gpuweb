@@ -1,6 +1,6 @@
 Here are some proposals or experiments in the area:
 
-- [Apple](https://github.com/gpuweb/proposals/WebGPU-Apple)
+- [Apple](https://github.com/gpuweb/proposals/tree/master/WebGPU-Apple)
 - Google [Chromium](https://github.com/gpuweb/nxt-chromium)
 - Google [Standalone](https://github.com/gpuweb/nxt-standalone)
 
