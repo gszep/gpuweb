@@ -6,6 +6,12 @@
 - [Administrivia](https://github.com/gpuweb/admin) - charters, etc
 - [Proposals and Experiments](https://github.com/gpuweb/gpuweb/wiki/Proposals---Experiments)
 
+## Minutes
+
+- [2017-05-31](http://www.w3.org/mid/CAGdfWNOTK5kHw_6mAx4_VmpCqk1SyXGtK-u3_zkUUyBAAp7uZw@mail.gmail.com)
+- [2017-05-24](http://www.w3.org/mid/CAGdfWNPW4uVGdBM6EPKAVTWY47dZdbz9EueLGNeAE=3HYVBtag@mail.gmail.com)
+- [2017-05-17](http://www.w3.org/mid/CAGdfWNOPxi9CUg-ejzYXP4VUbc8cRTnSM0u-fEoUAkRUPVC-Ww@mail.gmail.com)
+
 ## Miscellaneous
 
 - The [WebKit blog post](https://webkit.org/blog/7380/next-generation-3d-graphics-on-the-web/) on the creation of the group.
