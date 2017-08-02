@@ -1,6 +1,6 @@
 From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/public-gpu/2017Jul/0004.html).
 
->
+> 
 DJ: what are next steps?
 Should Corentin or someone define an API? Or move on with the assumption that we have an agreement of the overall shape of this part? 
 KR / MM: seems too early to define an API
