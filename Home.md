@@ -9,6 +9,7 @@
 
 ## Minutes
 
+- [2017-09-06](https://lists.w3.org/Archives/Public/public-gpu/2017Sep/0000.html)
 - [2017-08-30](https://lists.w3.org/Archives/Public/public-gpu/2017Aug/0073.html)
 - [2017-08-23](https://lists.w3.org/Archives/Public/public-gpu/2017Aug/0053.html)
 - [2017-08-16](https://lists.w3.org/Archives/Public/public-gpu/2017Aug/0001.html)
