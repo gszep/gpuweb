@@ -35,7 +35,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Consensus: All rendering must be done while a render pass is “open”. No compute may be done while a render pass is “open.” Only one pass may be open at a time.
   - Consensus: Compute passes need to be opened and closed too
     - Open Question: Do blit/memory passes need to be opened and closed?
-  - Consensus: Consecutive render passes don’t inherit state
+  - Open Question: Should consecutive render passes inherit state?
   - Consensus: The destination set of textures you’re drawing into can only change at a render pass boundary
   - Open Question: Should render passes include synchronization dependencies?
 - Binding model
