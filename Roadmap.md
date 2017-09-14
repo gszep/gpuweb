@@ -22,6 +22,8 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
 > 
 > MM: I can start!
 
+("MVP" means "Minimum Viable Product" and refers to a version 0 of the API.)
+
 - High level object model (Relationship between buffers, queues, renderpasses, etc.)
   - Consensus: There should be at least one type of queue: a queue that can perform rendering, compute, and memory operations
   - Consensus: MVP will include compute facilities
@@ -57,12 +59,10 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
     - Open Question: Aligned to what?
   - Open Question: Should resources be allowed to automatically migrate between different memory regions on the GPU
 - Shading Language
+  - Open Question: Should the API accept human authorable source? Should it accept bytecode? Both?
 - GPU-Driven Rendering
 - Threading model
-- Bundles / Secondary command buffers
-  - Consensus: Not included in MVP
-- Compute
-  - Open Question: Should we include it in MVP?
+- Consensus: Don't include bundles / secondary command buffers in the MVP
 - Consensus: Don't include stream-out / transform feedback in the MVP
 - Consensus: Don't include predicated rendering in the MVP
 - Consensus: Don't include tessellation in the MVP
