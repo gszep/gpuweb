@@ -24,25 +24,27 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
 
 - High level object model (Relationship between buffers, queues, renderpasses, etc.)
   - Consensus: There should be at least one type of queue: a queue that can perform rendering, compute, and memory operations
-    - Open Question: We may not decide to spec compute for the MVP
-  - Consensus: MVP will only allow one instance of a queue object
+  - Consensus: MVP will include compute facilities
+  - Open question: MVP may only allow one instance of a queue object
   - Open Question: We may want additional types/capabilities of queues
   - Consensus: Queues will need to be created at device creation time
 - Render Passes
   - Consensus: Metal’s render encoders and Vulkan’s render sub-passes will be encapsulated in the same API object (casually referred to as a “render pass”)
   - Consensus: All rendering must be done while a render pass is “open”. No compute may be done while a render pass is “open.” Only one pass may be open at a time.
-    - Open Question: Do you have to “open” a “compute pass”?
+  - Consensus: Compute passes need to be opened and closed too
+    - Open Question: Do blit/memory passes need to be opened and closed?
   - Consensus: Consecutive render passes don’t inherit state
   - Consensus: The destination set of textures you’re drawing into can only change at a render pass boundary
   - Open Question: Should render passes include synchronization dependencies?
 - Binding model
   - Consensus: Generally, use Vulkan’s binding model: A 3-layered hierarchy: Descriptors, a set of descriptors, and a (single) collection of sets.
     - Open Question: D3D has to keep samplers separately from all other resources
+    - Open Question: How does allocation of descriptor sets and pooling of descriptors work in D3D?
 - Pipeline States
   - Consensus: In general, include the union of all 3 platform API’s pipeline state
   - Consensus: Includes depth/stencil state
   - Consensus: Does not include sample mask
-  - Consensus: Renderpass information is not included (Vulkan backends will create dummy renderpasses)
+  - Open Question: Should Renderpass information be included? (Vulkan backends would need to create dummy renderpasses)
   - Consensus: Separate blend state is included (thereby requiring a Vulkan extension)
   - Consensus: Does not include per-face stencil state
 - Synchronization
