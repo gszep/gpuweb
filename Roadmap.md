@@ -60,6 +60,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Open Question: Should resources be allowed to automatically migrate between different memory regions on the GPU
 - Shading Language
   - Open Question: Should the API accept human authorable source? Should it accept bytecode? Both?
+  - Consensus: Some text form of the shading language would need to be specified (not just a binary form)
 - GPU-Driven Rendering
 - Threading model
 - Consensus: Don't include bundles / secondary command buffers in the MVP
