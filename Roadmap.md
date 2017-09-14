@@ -63,8 +63,8 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Consensus: Not included in MVP
 - Compute
   - Open Question: Should we include it in MVP?
-- Stream-out / Transform feedback
-- Predicated Rendering
-- Tessellation
-- Sparse Resources
+- Consensus: Don't include stream-out / transform feedback in the MVP
+- Consensus: Don't include predicated rendering in the MVP
+- Consensus: Don't include tessellation in the MVP
+- Consensus: Don't include sparse resources in the MVP
 - Queries (Performance, or fragment pass count & similar info)
