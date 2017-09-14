@@ -49,6 +49,13 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Open Question: Should Renderpass information be included? (Vulkan backends would need to create dummy renderpasses)
   - Consensus: Separate blend state is included (thereby requiring a Vulkan extension)
   - Consensus: Does not include per-face stencil state
+  - Consensus: MVP does not include depth bounds test
+  - Consensus: Render targets and rasterizer need to have the same sample count. This sample count is specified in the pipeline state.
+  - Consensus: MVP does not include an explicit pipeline caching API
+  - Consensus: MVP does not include derivative pipelines
+  - Consensus: Pipeline state object will have to include the format of the index buffer (int16 or int32) to make primitive restart sentinel value work
+  - Open question: Should the API make a distinction between having a depth test which always passes and disabling the depth test?
+  - Open question: Should there be an extra bool to disable independent blending, or should it be implicit from the blend attachments?
 - Synchronization
   - Consensus: Fences will have 1 bit of information in them
   - Consensus: It should be difficult to have undefined behavior
