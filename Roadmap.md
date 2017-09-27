@@ -43,6 +43,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
     - Open Question: D3D has to keep samplers separately from all other resources
     - Open Question: How does allocation of descriptor sets and pooling of descriptors work in D3D?
 - Pipeline States
+  - [Pipeline design doc](https://github.com/gpuweb/gpuweb/blob/master/design/Pipelines.md).
   - Consensus: In general, include the union of all 3 platform API’s pipeline state
   - Consensus: Includes depth/stencil state
   - Consensus: Does not include sample mask
