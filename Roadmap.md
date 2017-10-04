@@ -59,8 +59,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
 - Rendering features
   - Consensus: MVP includes facilities to rendering to multiple render targets in a single draw call
   - Consensus: Draw commands should support instancing.
-  - Consensus: MVP includes facilities for GPU-driven rendering
-    - Open Question: What should these facilities be?
+  - Consensus: MVP does not include the ability for the draw-call arguments (like the number of vertices, etc.) to come from a buffer
   - Open Question: Should the MVP include a way to create mipmaps for an existing texture
   - Consensus: Don't include a way to update the contents of a buffer from immediate operands in the command stream
   - Consensus: Include multisampling in the MVP
@@ -71,6 +70,8 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
     - Open Question: D3D has to keep samplers separately from all other resources
     - Open Question: How does allocation of descriptor sets and pooling of descriptors work in D3D?
   - Open Question: Should the MVP support resource heaps
+  - Consensus: The GPU won't be able to change the set of visible resources to a shader
+  - Consensus: Resources cannot hold references to other resources.
 - Pipeline States
   - [Pipeline design doc](https://github.com/gpuweb/gpuweb/blob/master/design/Pipelines.md).
   - Consensus: In general, include the union of all 3 platform API’s pipeline state
