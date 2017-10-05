@@ -32,7 +32,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Consensus: API will be in Javascript
   - Open Question: Will we also include a WebAssembly API?
 - Hardware and software targets
-  - Consensus: Any device with any version of Vulkan (that functions correctly) should be able to run WebGPU
+  - Consensus: The vast majority of device with any version of Vulkan (that functions correctly) should be able to run WebGPU. (meaning some feature flags might be required if they are widespread)
     - Open Question: Which Vulkan extensions / SPIR-V capabilities should be required? Which do we not want to require?
   - Consensus: Any device with any version of Metal should be able to run WebGPU, with any feature level
   - Consensus: Any device with Direct3D 12 or later should be able to run WebGPU, with any shader model and any feature level
@@ -51,7 +51,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Consensus: MVP will include compute facilities
     - Consensus: Compute passes need to be opened and closed too
   - Consensus: MVP will include copy/blit facilities
-    - Consensus: Copy/blit passes need to be opened and closed
+    - Open Question:  Do Copy/blit passes need to be opened and closed too?
   - Open Question: Should consecutive render passes inherit state?
   - Consensus: The destination set of textures you’re drawing into can only change at a render pass boundary
   - Open Question: Should render passes include synchronization dependencies?
@@ -59,7 +59,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
 - Rendering features
   - Consensus: MVP includes facilities to rendering to multiple render targets in a single draw call
   - Consensus: Draw commands should support instancing.
-  - Consensus: MVP does not include the ability for the draw-call arguments (like the number of vertices, etc.) to come from a buffer
+  - Consensus: MVP does not include the ability for the draw-call arguments (like the number of vertices, etc.) to come from a buffer, but the v1 will.
   - Open Question: Should the MVP include a way to create mipmaps for an existing texture
   - Consensus: Don't include a way to update the contents of a buffer from immediate operands in the command stream
   - Consensus: Include multisampling in the MVP
@@ -90,8 +90,8 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
 - Synchronization
   - Consensus: Fences will have 1 bit of information in them
   - Consensus: It should be difficult to have undefined behavior
-  - Consensus: It is impossible to perform synchronization within a single WebGPU pass. All synchronization happens at pass boundaries. (Therefore, synchronization is explicit from the author)
-    - Open Question: How much information does the programmer need to specify at a pass boundary in order to help out the implementation?
+  - Consensus: It is impossible to perform synchronization within a single WebGPU subpass. All synchronization happens at subpass boundaries. (Therefore, synchronization is explicit from the author)
+    - Open Question: How much information does the programmer need to specify at a subpass boundary in order to help out the implementation?
   - Open Question: How far should we go to eliminate non-portable behavior
     - Consensus: It is impossible to guarantee portable behavior in all situations (because of UAVs)
   - Open Question: How to do GPU-CPU synchronization?
