@@ -114,7 +114,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Consensus: Uploads/downloads will have the same synchronization type of mechanisms as the rest of the API
   - Open Question: Can data for an upload be supplied directly, or does it first need to be owned by another API object before it can be used?
   - Open Question: What mechanism should be used to let the app know that a download has completed? Promises? An API object that can be polled?
-  - Open Question: Should a WebGPU resource object be able to represent a collection of platform-API buffers? Or, does a WebGPU resource object have a set of capabilities that the author needs to react to? (like "able to be sampled from" or "able to be read from the CPU")
+  - Open Question: Should a WebGPU resource object be able to represent a collection of platform-API resources? Or, does a WebGPU resource object have a set of capabilities that the author needs to react to? (like "able to be sampled from" or "able to be read from the CPU")
   - Open Question: Should a WebGPU application need to know how many backbuffers there are in the canvas framebuffer?
 - Threading model
 - Consensus: Don't include bundles / secondary command buffers in the MVP
