@@ -94,7 +94,6 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
     - Open Question: How much information does the programmer need to specify at a subpass boundary in order to help out the implementation?
   - Open Question: How far should we go to eliminate non-portable behavior
     - Consensus: It is impossible to guarantee portable behavior in all situations (because of UAVs)
-  - Open Question: How to do GPU-CPU synchronization?
 - Resources
   - Consensus: GPU-visible buffers will have to be aligned
     - Open Question: Aligned to what?
@@ -109,6 +108,14 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Consensus: Language must abide by the browser's Same Origin policy.
   - Consensus: Implementations are free to kill shaders at an implementation-dependent time for running too long
   - Consensus: Shading language should be based off of either SPIR-V, WSL, or HLSL
+- Resource uploads/downloads to/from device
+  - Consensus: Uploads/downloads will be submitted to the queue between adjacent passes
+    - Open Question: Should uploads/downloads actually be its own type of pass? (like a render pass and compute pass)
+  - Consensus: Uploads/downloads will have the same synchronization type of mechanisms as the rest of the API
+  - Open Question: Can data for an upload be supplied directly, or does it first need to be owned by another API object before it can be used?
+  - Open Question: What mechanism should be used to let the app know that a download has completed? Promises? An API object that can be polled?
+  - Open Question: Should a WebGPU resource object be able to represent a collection of platform-API buffers? Or, does a WebGPU resource object have a set of capabilities that the author needs to react to? (like "able to be sampled from" or "able to be read from the CPU")
+  - Open Question: Should a WebGPU application need to know how many backbuffers there are in the canvas framebuffer?
 - Threading model
 - Consensus: Don't include bundles / secondary command buffers in the MVP
 - Consensus: Don't include stream-out / transform feedback in the MVP
