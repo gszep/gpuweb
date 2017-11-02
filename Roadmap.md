@@ -110,7 +110,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Consensus: Shading language should be based off of either SPIR-V, WSL, or HLSL
 - Resource uploads/downloads to/from device
   - Consensus: Uploads/downloads will be submitted to the queue between adjacent passes
-    - Open Question: Should uploads/downloads actually be its own type of pass? (like a render pass and compute pass)
+    - Open Question: Should uploads/downloads actually be its own type of pass? (like a render pass or compute pass)
   - Consensus: Uploads/downloads will have the same synchronization type of mechanisms as the rest of the API
   - Open Question: Can data for an upload be supplied directly, or does it first need to be owned by another API object before it can be used?
   - Open Question: What mechanism should be used to let the app know that a download has completed? Promises? An API object that can be polled?
