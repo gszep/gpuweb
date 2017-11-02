@@ -97,7 +97,6 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
 - Resources
   - Consensus: GPU-visible buffers will have to be aligned
     - Open Question: Aligned to what?
-  - Open Question: Should resources be allowed to automatically migrate between different memory regions on the GPU
   - Consensus: You can't synchronously upload encoded content (image or video) to a WebGPU content. (Decodes into an ImageBitmap need to be done ahead-of-time).
   - Consensus: There is a way to upload data to a buffer such that you are guaranteed that any subsequent draw calls see the contents of this buffer (for WebVR)
 - Shading Language
