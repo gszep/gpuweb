@@ -9,6 +9,7 @@
 
 ## Minutes
 
+- [2017-11-15](https://lists.w3.org/Archives/Public/public-gpu/2017Nov/0035.html)
 - [2017-11-07 TPAC with WASM CG](https://lists.w3.org/Archives/Public/public-gpu/2017Nov/0001.html)
 - [2017-11-01](https://lists.w3.org/Archives/Public/public-gpu/2017Nov/0000.html)
 - [2017-10-25](https://lists.w3.org/Archives/Public/public-gpu/2017Oct/0028.html)
