@@ -106,7 +106,7 @@ From [Minutes for the 2017-07-26 meeting](https://lists.w3.org/Archives/Public/p
   - Consensus: The shading language must be no more expressive then SPIR-V in Logical Addressing Mode
   - Consensus: Language must abide by the browser's Same Origin policy.
   - Consensus: Implementations are free to kill shaders at an implementation-dependent time for running too long
-  - Consensus: Shading language should be based off of either SPIR-V, WSL, or HLSL
+  - Consensus: The recommended/promoted shading language for humans to write in is HLSL
 - Resource uploads/downloads to/from device
   - Consensus: Uploads/downloads will be submitted to the queue between adjacent passes
     - Open Question: Should uploads/downloads actually be its own type of pass? (like a render pass or compute pass)
