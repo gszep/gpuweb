@@ -70,7 +70,7 @@ Buffer blocks may be used in Secure HLSL as they are in HLSL.
 
 All variables live for the lifetime of the program. This applies to all variables, even `thread` variables. This means that the allocation of every variable occurs before the program begins executing, and the deallocation of every variable occurs after the program completes executing. At the location of a variable's declaration in the source program, the storage associated with the variable will be zero-filled (or `null`-filled, depending on the type). Then, the variable's initializer will run, and the result of the initializer will be assigned into the storage associated with the variable.
 
-This is possible because WSL does not support recursion. Therefore, local variables simply get global storage. Local variables are initialized at the point of their declaration. Hence, the following is a valid program, which will exhibit the same behavior on every WSL implementation:
+This is possible because Secure HLSL does not support recursion. Therefore, local variables simply get global storage. Local variables are initialized at the point of their declaration. Hence, the following is a valid program, which will exhibit the same behavior on every Secure HLSL implementation:
 
     thread int* foo()
     {
@@ -260,7 +260,7 @@ Type parameters may also be specialized. For example,
     vector<int, 2> foo; // foo has "x" and "y" members.
     vector<int, 17> bar; // Error! No specialization provided for "length" == 17.
 
-WSL is guaranteed to compile generics by instantiation. This is observable, since functions can return pointers to their locals. Here is an example of this phenomenon:
+Secure HLSL is guaranteed to compile generics by instantiation. This is observable, since functions can return pointers to their locals. Here is an example of this phenomenon:
 
     thread int^ allocate<uint>()
     {
@@ -328,7 +328,7 @@ Protocols can also mix other protocols in explicitly. Like in the example above,
 
 ## Operator Overloading
 
-Many WSL operations desugar to calls to functions. Those functions are called *operator overloads* and are declared using syntax that involves the keyword `operator`. The following operations result in calls to operator overloads:
+Many Secure HLSL operations desugar to calls to functions. Those functions are called *operator overloads* and are declared using syntax that involves the keyword `operator`. The following operations result in calls to operator overloads:
 
 - Numerical operators (`+`, `-`, `*`, `/`, etc.).
 - Increment and decrement (`++`, `--`).
@@ -336,7 +336,7 @@ Many WSL operations desugar to calls to functions. Those functions are called *o
 - Accessing values in arrays (`[]`, `[]=`, `&[]`).
 - Accessing fields (`.field`, `.field=`, `&.field`).
 
-WSL's operator overloading is designed to synthesize many operators for you:
+Secure HLSL operator overloading is designed to synthesize many operators for you:
 
 - Read-modify-write operators like `+=` are desugared to a load of the load value, the underlying operator (like `+`), and a store of the new value. It's not possible to override `+=`, `-=`, etc.
 - `x++` and `++x` both call the same operator overload. `operator++` takes the old value and returns a new one; for example the built-in `++` for `int` could be written as: `int operator++(int value) { return value + 1; }`.
@@ -364,7 +364,7 @@ Cast overloading allows for supporting conversions between types and for creatin
     
     Complex<float> i = Complex<float>(0, 1);
 
-WSL supports accessor overloading as part of the operator overloading syntax. This gives the programmer broad powers. For example:
+Secure HLSL supports accessor overloading as part of the operator overloading syntax. This gives the programmer broad powers. For example:
 
     struct Foo {
         int x;
@@ -423,7 +423,7 @@ Alternatively, it's possible to overload getters and setters (`operator[]` and `
 
 ## Function Overload Resolution
 
-WSL automatically selects the most specific overload if given multiple choices. For example:
+Secure HLSL automatically selects the most specific overload if given multiple choices. For example:
 
     void foo(int);    // 1
     void foo(double); // 2
@@ -474,7 +474,7 @@ The requirements of Logical Mode are:
 
 ## Additional Limitations
 
-The following additional limitations may be placed on a WSL program:
+The following additional limitations may be placed on a Secure HLSL program:
 
 - `device`, `constant`,  and `groupshared` pointers cannot point to data that may have pointers in it. This safety check is not done as part of the normal type system checks. It's performed only after instantiation. This check is always performed for every shader.
 
