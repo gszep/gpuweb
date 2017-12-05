@@ -36,3 +36,4 @@
 ## Miscellaneous
 
 - The [WebKit blog post](https://webkit.org/blog/7380/next-generation-3d-graphics-on-the-web/) on the creation of the group.
+- [Secure HLSL Explainer](https://github.com/gpuweb/gpuweb/wiki/Secure-HLSL-Explainer)
