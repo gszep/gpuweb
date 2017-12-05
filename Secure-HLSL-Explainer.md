@@ -87,9 +87,9 @@ This is possible because Secure HLSL does not support recursion. Therefore, loca
     int baz()
     {
         thread int* p = foo();
-        ^p = 53;
+        *p = 53;
         foo();
-        return ^p; // Returns 42.
+        return *p; // Returns 42.
     }
 
 All shader stage outputs are initialized to 0 before the shader stage begins executing. A variable is considered a shader stage output if it has an associated semantic and a write to this semantic occurs anywhere within the possible execution paths within the shader stage's entry point.
@@ -262,7 +262,7 @@ Type parameters may also be specialized. For example,
 
 Secure HLSL is guaranteed to compile generics by instantiation. This is observable, since functions can return pointers to their locals. Here is an example of this phenomenon:
 
-    thread int^ allocate<uint>()
+    thread int* allocate<uint>()
     {
         int x;
         return &x;
@@ -401,7 +401,7 @@ It's also possible to provide an address-getting overload called an *ander*:
     struct Foo {
         int value;
     }
-    thread int^ operator&.valueAlias(thread Foo^ foo)
+    thread int* operator&.valueAlias(thread Foo* foo)
     {
         return &foo->value;
     }
@@ -414,7 +414,7 @@ The same overloading power is provided for array accesses. For example:
         T x;
         T y;
     }
-    thread T^ operator&[](thread T^ ptr, uint index)
+    thread T* operator&[](thread T* ptr, uint index)
     {
         return index ? &ptr->y : &ptr->x;
     }
