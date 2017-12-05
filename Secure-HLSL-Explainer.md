@@ -42,7 +42,7 @@ Secure HLSL supports the [types available to HLSL](https://msdn.microsoft.com/en
 
 ### Memory Spaces
 
-All variables in Secure HLSL are associated with a memory space. Secure HLSL includes three memory spaces:
+All variables in Secure HLSL are associated with a memory space. Secure HLSL includes four memory spaces:
 
 - `thread`. By default, local variables are associated with this memory space.
 - `constant`. Variables inside a `Buffer` or `StructuredBuffer` object, or a `cbuffer` or `tbuffer` block are associated with this memory space.
