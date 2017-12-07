@@ -482,7 +482,7 @@ The following additional limitations may be placed on a Secure HLSL program:
 
 HLSL's intrinsic functions are included in Secure HLSL, with the following exceptions:
 
-- If an argument to any built-in function is `NaN`, and the function returns a floating point value, the function returns the first `NaN` argument, duplicated out to any array cells if necessary, without any side effects. If the function returns a non-floating point value, it returns 0 or false or `null`, duplicated out to any array cells if necessary, without any side effects. 
+- NaN propogation occurs using the same rules as WebAssembly. Operations where one (or more) inputs are NaNs will produce a NaN, but WSL does not specify the exact bit representation of the result.
 - Denormalized floats must not exist. If a denormalized float may arise from some calculation or memory load, it is immediately flushed to 0 by the runtime.
 - `clamp()`: if `min > max`, the result is `min`.
 - The following functions must not be present inside divergent control flow, including loops:
