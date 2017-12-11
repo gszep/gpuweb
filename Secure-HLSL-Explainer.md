@@ -51,8 +51,6 @@ All variables in Secure HLSL are associated with a memory space. Secure HLSL inc
 
 ### Built-In Types
 
-In Secure HLSL, textures and samplers are never combined into a single object. The `texture` HLSL type is not present in Secure HLSL, nor is the `sampler` HLSL type present in Secure HLSL.
-
 The following HLSL types are not present in Secure HLSL:
 
 - `StreamOutputObject`
@@ -61,6 +59,7 @@ The following HLSL types are not present in Secure HLSL:
 - `ByteAddressBuffer`
 - `RWByteAddressBuffer`
 - strings
+- "old-style" `texture` and `sampler` types are not present, because in Secure HLSL, textures and samplers are never combined into a single object.
 
 In addition to the above types, author-specified classes and interfaces are also not present in Secure HLSL. Instead, Secure HLSL has protocols (described below).
 
