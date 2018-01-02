@@ -40,3 +40,11 @@
 
 - The [WebKit blog post](https://webkit.org/blog/7380/next-generation-3d-graphics-on-the-web/) on the creation of the group.
 - [Secure HLSL Explainer](https://github.com/gpuweb/gpuweb/wiki/Secure-HLSL-Explainer)
+
+- Draft [WebGPU environment specification for SPIR-V](https://docs.google.com/document/d/12HItPcVy_uRpE22do9Aj-_aPA0XNLCbTBcIYA-UKvJ0/)
+
+NXT explainer documents:
+ - [NXT "memory barriers"](https://docs.google.com/document/d/1k7lPmxP7M7MMQR4g210lNC5TPwmXCMLgKOQWNiuJxzA)
+ - [NXT buffer mapping](https://docs.google.com/document/d/1HFzMMvDGHFtTgjNT0j-0SQ1fNU9R7woZ4JuNJdAXBjg/)
+ - [NXT overview](https://docs.google.com/document/d/1-lAvR9GXaNJiqUIpm3N2XuGUWv_JrkpGizDN0bNq7wY) (old)
+ - Various old investigations on [vertex setup](https://docs.google.com/document/d/1SIUpdg-6Xm5FFF1ktdBfnR5oRKjyPAfXir7Drui4cYM/), [resource creation](https://docs.google.com/document/d/1hK1SkTFkXJXPjyla0EEl1fOIwJSc6T41AV2mGiovyFU/), [binding model](https://docs.google.com/document/d/1_xeTnk6DlN7YmePQQAlnHndA043rgwBzUYtatk5y7kQ/) and [data upload](https://docs.google.com/document/d/1Mi9l14zG8HzJ5Z6107SdPhON0mq4d-3SUI8iS631nek)
