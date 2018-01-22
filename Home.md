@@ -9,7 +9,9 @@
 
 ## Minutes
 
-- [2017-12-13](https://lists.w3.org/Archives/Public/public-gpu/2018Jan/0001.html) (text is garbled ?!)
+- [2017-01-17](https://docs.google.com/document/d/10ecVqRUAVPUcWsILCTzyNpXWmSbjhhcXgVT7cE3x_pU)
+- [2017-01-10](https://docs.google.com/document/d/1_qAOHyO1bxeG_DL3Yvpx7u6ZT2wCWAyAGLNmWaYpKP4/)
+- [2017-12-13](https://docs.google.com/document/d/1wG9BRLUSw4FbpnvqieK--jTWaNnuaahtA0VBIvHdA5c/)
 - [2017-12-06](https://lists.w3.org/Archives/Public/public-gpu/2017Dec/0012.html)
 - [2017-11-29](https://lists.w3.org/Archives/Public/public-gpu/2017Dec/0001.html)
 - [2017-11-15](https://lists.w3.org/Archives/Public/public-gpu/2017Nov/0035.html)
