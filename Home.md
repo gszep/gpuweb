@@ -6,6 +6,7 @@
 - [Administrivia](https://github.com/gpuweb/admin) - charters, etc
 - [Proposals and Experiments](https://github.com/gpuweb/gpuweb/wiki/Proposals---Experiments)
 - [Roadmap](https://github.com/gpuweb/gpuweb/wiki/Roadmap)
+- [Meetings](https://github.com/gpuweb/gpuweb/wiki/Meetings)
 
 ## Minutes
 
