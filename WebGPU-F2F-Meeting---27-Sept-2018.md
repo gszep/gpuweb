@@ -8,7 +8,7 @@ The meeting will be at Apple Park. It is essential that you register to attend, 
 
 The most convenient place to park is the [Visitor's Center](https://www.apple.com/retail/appleparkvisitorcenter/). There is above ground and below ground parking.
 
-Unless the email instructions say otherwise, walk from the Visitor's Center into the main Apple Park entrance. Show your invitation pass to security. Myles and Dean will be waiting in the foyer to show people to the meeting room. Our phone numbers are in the mail sent to the internal list.
+Unless the email instructions say otherwise, walk from the Visitor's Center into the main Apple Park entrance. Show your invitation pass to security. Myles and Dean will be waiting in the foyer to show people to the meeting room. [Our phone numbers](https://lists.w3.org/Archives/Member/internal-gpu/2018Sep/0006.html) are in the mail sent to the internal list.
 
 ## Lunch
 
