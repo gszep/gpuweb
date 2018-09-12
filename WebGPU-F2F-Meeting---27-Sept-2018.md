@@ -30,6 +30,7 @@ Apple is hosting a dinner with the WebGL Working Group on Wednesday 26 September
 - Ken Russell, Google
 - Kai Ninomiya, Google
 - Dan Sinclair, Google
+- Austin Eng, Google (maybe)
 - Jeff Gilbert, Mozilla
 - Rafael Cintron, Microsoft
 - ~~Dzmitry Malyshau, Mozilla~~
