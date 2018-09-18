@@ -36,5 +36,6 @@ Apple is hosting a dinner with the WebGL Working Group on Wednesday 26 September
 - Rafael Cintron, Microsoft
 - ~~Dzmitry Malyshau, Mozilla~~
 - Yunchao He, Intel
+- James Darpinian, Google
 
 Please add your name here if you're attending. If you don't have write access to the wiki, send an email to [Dean](mailto:dino@apple.com).
