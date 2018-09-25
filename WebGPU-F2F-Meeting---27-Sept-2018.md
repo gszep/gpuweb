@@ -18,7 +18,7 @@ There is a coffee bar in the building which does both espresso and filtered drin
 
 ## Dinner
 
-Apple is hosting a dinner with the WebGL Working Group on Wednesday 26 September. Location TBA. Partners, spouses are welcome.
+Apple is hosting a dinner with the WebGL Working Group on Wednesday 26 September. Details are in email. Partners, spouses are welcome.
 
 ## Agenda and Notes
 
