@@ -32,6 +32,7 @@ The [agenda and notes](https://docs.google.com/document/d/1NqJWi_VW7njO8AeMmJbqh
 
 - Myles Maxfield, Apple
 - Dean Jackson, Apple
+- Thomas Denney, Apple
 - Corentin Wallez, Google
 - Ken Russell, Google
 - Kai Ninomiya, Google
