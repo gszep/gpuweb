@@ -30,5 +30,8 @@ N/A
 
 # Resources
 
-* SPIR-V compatible samples:
-  * https://github.com/austinEng/webgpu-samples
+* [SPIR-V compatible samples](https://github.com/austinEng/webgpu-samples):
+    * <https://austineng.github.io/webgpu-samples/hello_triangle.html>
+    * <https://austineng.github.io/webgpu-samples/rotating_cube.html>
+    * <https://austineng.github.io/webgpu-samples/textured_cube.html>
+    * <https://austineng.github.io/webgpu-samples/compute_boids.html>
