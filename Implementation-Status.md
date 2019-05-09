@@ -18,7 +18,7 @@ Compute                   |          |           |       | 👷  |         |
 └ Basic Compute           |          |           |       | 👷  |         |
 └ Texture Storage         |          |           |       |     |         |
 
-* Root Issue [#877147](https://bugs.chromium.org/p/chromium/issues/detail?id=877147) and blocking issues the authoritative reference. Search for [known bugs](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU) before filing [new bugs](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink>WebGPU).
+* Root Issue [#877147](https://bugs.chromium.org/p/chromium/issues/detail?id=877147), and blocking issues, are the authoritative reference. Search for [known bugs](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU) before filing [new bugs](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink>WebGPU).
 * As GPU sandboxing isn't implemented yet for the WebGPU API, it is possible to read GPU data for other processes.
 * The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled.
 
