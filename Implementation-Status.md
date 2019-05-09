@@ -1,5 +1,7 @@
 This page shows the current implementation status of the WebGPU API in browsers. It also lists some resources (samples, demos) for enthusiastic web developers.
 
+The [public-gpu@w3.org](https://lists.w3.org/Archives/Public/public-gpu/) mailing list is a good place to ask questions or provide feedback on the API.
+
 # Implementation Status
 
 ## Google Chrome (SPIR-V compatible)
