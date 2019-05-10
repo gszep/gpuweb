@@ -24,11 +24,15 @@ Compute                   |          |           |       | 👷  |         |
 * As GPU sandboxing isn't implemented yet for the WebGPU API, it is possible to read GPU data for other processes. **Avoid leaving it enabled when browsing the untrusted web.**
 * The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled.
 
+## Edge
+N/A
+
 ## Firefox (SPIR-V compatible)
 N/A
 
-## Safari (WHLSL compatible)
-N/A
+## Safari (WHLSL compatible - In Progress)
+
+Work is in progress in [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/).
 
 # Samples
 
