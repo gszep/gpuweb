@@ -34,6 +34,8 @@ N/A
 
 Work is in progress in [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/).
 
+Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=WebGPU).
+
 # Samples
 
 * webgpu-samples ([source](https://github.com/austinEng/webgpu-samples)) (uses SPIR-V)
