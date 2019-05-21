@@ -34,7 +34,7 @@ N/A
 
 Work is in progress in [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/).
 
-To enable WebGPU, first make sure the Develop menu is visible using Safari → Preferences→ Advanced → Show Develop menu in menu bar. Then, in the Develop menu, make sure Experimental Features → WebGPU is checked. **Avoid leaving it enabled when browsing the untrusted web.**
+To enable WebGPU, first make sure the Develop menu is visible using `Safari` → `Preferences` → `Advanced` → `Show Develop menu` in menu bar. Then, in the `Develop` menu, make sure `Experimental Features` → `WebGPU` is checked. **Avoid leaving it enabled when browsing the untrusted web.**
 
 Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=WebGPU).
 
