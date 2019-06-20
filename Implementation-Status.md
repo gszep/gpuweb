@@ -1,4 +1,4 @@
-This page shows the current implementation status of the [WebGPU API spec](https://gpuweb.github.io/gpuweb/spec/) in browsers. It also lists some resources (samples, demos) for enthusiastic web developers.
+This page shows the current implementation status of the [WebGPU API spec](https://gpuweb.github.io/gpuweb/) in browsers. It also lists some resources (samples, demos) for enthusiastic web developers.
 
 The [public-gpu@w3.org](https://lists.w3.org/Archives/Public/public-gpu/) mailing list is a good place to ask questions or provide feedback on the API.
 
