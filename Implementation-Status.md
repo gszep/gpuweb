@@ -4,7 +4,7 @@ The [public-gpu@w3.org](https://lists.w3.org/Archives/Public/public-gpu/) mailin
 
 # Implementation Status
 
-## Google Chrome (SPIR-V compatible)
+## Google Chrome (SPIR-V compatible - In Progress)
 
 Work is in progress in [Chrome Canary](http://chrome.com/canary).
 
@@ -15,7 +15,7 @@ Rendering                 |          |           |       | 👷  |         |
 └ Canvas                  |          |           |       | 👷  |         |
 └ Textures                |          |           |       | 👷  |         |
 └ Multisampling           |          |           |       | 👷  |         |
-└ Dynamic Buffer Offset   |          |           |       |     |         |
+└ Dynamic Buffer Offset   |          |           |       | 👷  |         |
 Compute                   |          |           |       | 👷  |         |
 └ Basic Compute           |          |           |       | 👷  |         |
 └ Texture Storage         |          |           |       |     |         |
