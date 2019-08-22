@@ -46,6 +46,8 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
     * [texture_cube.html](https://austineng.github.io/webgpu-samples/textured_cube.html) ([source](https://github.com/austinEng/webgpu-samples/blob/master/textured_cube.html))
     * [compute_boids.html](https://austineng.github.io/webgpu-samples/compute_boids.html) ([source](https://github.com/austinEng/webgpu-samples/blob/master/compute_boids.html))
 
+* [WebKit/Safari Demos](https://webkit.org/demos/webgpu) (uses WHLSL)
+
 # Frameworks
 
 * [Babylon.js](https://www.babylonjs.com/) (uses SPIR-V)
