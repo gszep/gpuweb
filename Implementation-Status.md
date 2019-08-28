@@ -48,6 +48,11 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
 
 * [WebKit/Safari Demos](https://webkit.org/demos/webgpu) (uses WHLSL)
 
+# Articles
+
+* [Get started with GPU Compute on the Web](https://developers.google.com/web/updates/2019/08/get-started-with-gpu-compute-on-the-web)
+
+
 # Frameworks
 
 * [Babylon.js](https://www.babylonjs.com/) (uses SPIR-V)
