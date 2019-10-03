@@ -48,6 +48,8 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
 
 * [WebKit/Safari Demos](https://webkit.org/demos/webgpu) (uses WHLSL)
 
+* [hello-webgpu-compute.glitch.me](https://hello-webgpu-compute.glitch.me): simple demo with both the SPIR-V and WSL paths
+
 # Articles
 
 * [Get started with GPU Compute on the Web](https://developers.google.com/web/updates/2019/08/get-started-with-gpu-compute-on-the-web)
