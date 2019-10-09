@@ -1,5 +1,3 @@
-## Workflow
-
 This document explains the workflow of developing the API, how it's tracked, and what stages a feature needs to go through before it can be considered done.
 
 We use [Github project](https://github.com/orgs/gpuweb/projects/1) for tracking the status of features and fixes. Every non-trivial change should have a single tracking issue in the "gpuweb" repository, which can link to other issues and PRs. Tracking has to go through the following steps:
