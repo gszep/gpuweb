@@ -7,6 +7,7 @@
 - [Proposals and Experiments](https://github.com/gpuweb/gpuweb/wiki/Proposals---Experiments)
 - [Roadmap](https://github.com/gpuweb/gpuweb/wiki/Roadmap)
 - [Meetings](https://github.com/gpuweb/gpuweb/wiki/Meetings)
+- [Workflow](https://github.com/gpuweb/gpuweb/wiki/Workflow)
 
 ## Minutes
 
