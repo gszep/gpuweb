@@ -40,13 +40,9 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
 
 # Samples
 
-* webgpu-samples ([source](https://github.com/austinEng/webgpu-samples)) (uses SPIR-V)
-    * [hello_triangle.html](https://austineng.github.io/webgpu-samples/hello_triangle.html) ([source](https://github.com/austinEng/webgpu-samples/blob/master/hello_triangle.html))
-    * [rotating_cube.html](https://austineng.github.io/webgpu-samples/rotating_cube.html) ([source](https://github.com/austinEng/webgpu-samples/blob/master/rotating_cube.html))
-    * [texture_cube.html](https://austineng.github.io/webgpu-samples/textured_cube.html) ([source](https://github.com/austinEng/webgpu-samples/blob/master/textured_cube.html))
-    * [compute_boids.html](https://austineng.github.io/webgpu-samples/compute_boids.html) ([source](https://github.com/austinEng/webgpu-samples/blob/master/compute_boids.html))
+* [webgpu-samples](https://austineng.github.io/webgpu-samples/) for Chrome (uses GLSL via SPIR-V)
 
-* [WebKit/Safari Demos](https://webkit.org/demos/webgpu) (uses WHLSL)
+* [WebKit/Safari Demos](https://webkit.org/demos/webgpu) (uses WSL)
 
 * [hello-webgpu-compute.glitch.me](https://hello-webgpu-compute.glitch.me): simple demo with both the SPIR-V and WSL paths
 
