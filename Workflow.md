@@ -13,7 +13,7 @@ Pull requests shouldn't be added as cards to the project. Instead, they should l
 
 ## Reading the [project tracker](https://github.com/orgs/gpuweb/projects/1)
 
-A cursory look at the [project](https://github.com/orgs/gpuweb/projects/1) can give us a rough idea on what the issues are currently in the works, and which ones need attention.
+A cursory look at the project can give us a rough idea on what the issues are currently in the works, and which ones need attention.
 
 On each card on the tracker, an icon appears on the bottom-right of the card if it is assigned. If no icon appears, the task (of completing the current column for this card) is currently unassigned. These issues are up for grabs.
 
