@@ -18,5 +18,3 @@ A cursory look at the project can give us a rough idea on what the issues are cu
 On each card on the tracker, an icon appears on the bottom-right of the card if it is assigned. If no icon appears, the task (of completing the current column for this card) is currently unassigned. These issues are up for grabs.
 
 In order to get a list of all project issues that are waiting to be picked up, use [this issue query](https://github.com/gpuweb/gpuweb/issues?q=is%3Aopen+is%3Aissue+project%3Agpuweb%2F1+no%3Aassignee). It shows all unassigned tracking issues (regardless of column).
-
-- [ ] test
