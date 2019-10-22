@@ -28,7 +28,10 @@ Compute                   |          |           |       | 👷  |         |
 N/A
 
 ## Firefox (SPIR-V compatible)
-N/A
+
+Work is in progress to provide a secure DOM interface to [wgpu-native](https://github.com/gfx-rs/wgpu) via IPC in Gecko.
+
+All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in BugZilla.
 
 ## Safari (WHLSL compatible - In Progress)
 
