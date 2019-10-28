@@ -45,5 +45,8 @@ This page aims to track the big picture of what sections the specification is mi
   - [ ] Line segments
   - [ ] Triangles
 - [ ] Fragment operations (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#fragops))
-
-TODO
+- [ ] Framebuffer
+  - [ ] Blending
+- [ ] Device-generated commands (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#device-generated-commands))
+- [ ] Extension mechanism
+- [ ] Formats
