@@ -34,6 +34,7 @@ This page aims to track the big picture of what sections the specification is mi
   - [ ] Render passes
   - [ ] Compute passes
   - [ ] Transfers
+  - [ ] Render bundles
 - [ ] Image operations (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#textures) for example)
   - [ ] Texel input operations
   - [ ] Texel output operations
@@ -50,3 +51,4 @@ This page aims to track the big picture of what sections the specification is mi
 - [ ] Device-generated commands (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#device-generated-commands))
 - [ ] Extension mechanism
 - [ ] Formats
+- [ ] Error handling
