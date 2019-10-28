@@ -1,0 +1,49 @@
+This page aims to track the big picture of what sections the specification is missing.
+
+- [ ] Introduction
+  - [x] basic description
+  - [x] Conventions
+  - [ ] Fixed-point data conversions (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#fundamentals-fixedconv) for example)
+  - [x] Type definitions
+- [x] Security considerations 
+  - anything missing?
+- [ ] Programming model
+  - [ ] CPU and GPU timelines (describes the kinds of timelines we have in the programming model)
+  - [ ] Memory model (describes the major types of memory WebGPU operates on under the hood and what guarantees we provide on their state)
+  - [ ] Multi-threading (describes the sharing semantics)
+  - [ ] Usage rules (describes the usage rules in general and how the synchronization works)
+- [ ] Initialization
+- [ ] Resources
+  - [ ] Buffers
+  - [ ] Textures
+  - [ ] Texture views
+  - [ ] Samplers
+- [ ] Shaders
+  - [ ] Language/syntax/format
+  - [ ] Shader modules
+  - [ ] Bind groups and their layouts
+  - [ ] Transformations (describes what we do to shaders in order for them to execute securely)
+  - [ ] Vertex shaders
+  - [ ] Fragment shaders
+  - [ ] Compute shaders
+- [ ] Pipelines
+  - [ ] Layouts
+  - [ ] Render states
+  - [ ] Compute states
+- [ ] Command buffers
+  - [ ] Render passes
+  - [ ] Compute passes
+  - [ ] Transfers
+- [ ] Image operations (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#textures) for example)
+  - [ ] Texel input operations
+  - [ ] Texel output operations
+  - [ ] Texel coordinates (normalized/integer)
+- [ ] Rasterization (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#primsrast))
+  - [ ] Rasterization order
+  - [ ] Multisampling
+  - [ ] Barycentric interpolation
+  - [ ] Line segments
+  - [ ] Triangles
+- [ ] Fragment operations (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#fragops))
+
+TODO
