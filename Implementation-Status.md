@@ -29,7 +29,23 @@ N/A
 
 ## Firefox (SPIR-V compatible)
 
-Work is in progress to provide a secure DOM interface to [wgpu-native](https://github.com/gfx-rs/wgpu) via IPC in Gecko.
+Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.webgpu.enable" pref. The implementation is based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust.
+
+- [x] Initialization
+- [ ] Resources
+  - [ ] buffers
+  - [ ] textures
+  - [ ] samplers
+- [ ] Binding
+  - [ ] pipeline layouts
+  - [ ] bind groups
+- [ ] Rendering
+- [ ] Computing
+- [ ] Presentation
+  - [ ] Windows
+  - [ ] macOS
+  - [ ] Linux
+  - [ ] Android
 
 All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in BugZilla.
 
@@ -40,6 +56,10 @@ Work is in progress in [Safari Technology Preview](https://developer.apple.com/s
 To enable WebGPU, first make sure the Develop menu is visible using `Safari` → `Preferences` → `Advanced` → `Show Develop menu in menu bar`. Then, in the `Develop` menu, make sure `Experimental Features` → `WebGPU` is checked. **Avoid leaving it enabled when browsing the untrusted web.**
 
 Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=WebGPU).
+
+## Servo (SPIR-V compatible)
+
+Work [in progress](https://github.com/servo/servo/pull/24708) to expose WebGPU initialization behind the "dom.webgpu.enabled" pref.
 
 # Samples
 
