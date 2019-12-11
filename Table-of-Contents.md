@@ -8,10 +8,10 @@ This page aims to track the big picture of what sections the specification is mi
 - [x] Security considerations 
   - anything missing?
 - [ ] Programming model
-  - [ ] CPU and GPU timelines (describes the kinds of timelines we have in the programming model)
-  - [ ] Memory model (describes the major types of memory WebGPU operates on under the hood and what guarantees we provide on their state)
+  - [x] CPU and GPU timelines (describes the kinds of timelines we have in the programming model)
+  - [x] Memory model (describes the major types of memory WebGPU operates on under the hood and what guarantees we provide on their state)
   - [ ] Multi-threading (describes the sharing semantics)
-  - [ ] Usage rules (describes the usage rules in general and how the synchronization works)
+  - [x] Usage rules (describes the usage rules in general and how the synchronization works)
 - [ ] Initialization
 - [ ] Resources
   - [ ] Buffers
