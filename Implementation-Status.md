@@ -29,11 +29,11 @@ N/A
 
 ## Firefox (SPIR-V compatible)
 
-Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.webgpu.enable" pref. The implementation is based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust.
+Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.webgpu.enabled" pref. The implementation is based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust.
 
 - [x] Initialization
 - [ ] Resources
-  - [ ] buffers
+  - [x] buffers
   - [ ] textures
   - [ ] samplers
 - [ ] Binding
