@@ -4,20 +4,20 @@ The [public-gpu@w3.org](https://lists.w3.org/Archives/Public/public-gpu/) mailin
 
 # Implementation Status
 
-## Google Chrome (SPIR-V compatible - In Progress)
+## Chromium (SPIR-V compatible - In Progress)
 
-Work is in progress in [Chrome Canary](http://chrome.com/canary).
+Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canary](https://www.microsoftedgeinsider.com/en-us/download)
 
 Feature/Platform          | Android  | Chrome OS | Linux | Mac | Windows |
 ------------------------- | :------: | :-------: | :---: | :-: | :-----: |
-Device                    |          |           |       | 👷  |         |
-Rendering                 |          |           |       | 👷  |         |
-└ Canvas                  |          |           |       | 👷  |         |
-└ Textures                |          |           |       | 👷  |         |
-└ Multisampling           |          |           |       | 👷  |         |
-└ Dynamic Buffer Offset   |          |           |       | 👷  |         |
-Compute                   |          |           |       | 👷  |         |
-└ Basic Compute           |          |           |       | 👷  |         |
+Device                    |          |           |       | 👷  |   👷    |
+Rendering                 |          |           |       | 👷  |   👷    |
+└ Canvas                  |          |           |       | 👷  |   👷    |
+└ Textures                |          |           |       | 👷  |   👷    |
+└ Multisampling           |          |           |       | 👷  |   👷    |
+└ Dynamic Buffer Offset   |          |           |       | 👷  |   👷    |
+Compute                   |          |           |       | 👷  |   👷    |
+└ Basic Compute           |          |           |       | 👷  |   👷    |
 └ Texture Storage         |          |           |       |     |         |
 
 * Root Issue [#852089](https://bugs.chromium.org/p/chromium/issues/detail?id=852089), and blocking issues, are the authoritative reference. Search for [known bugs](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU) before filing [new bugs](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink>WebGPU).
