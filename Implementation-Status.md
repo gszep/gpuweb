@@ -34,18 +34,21 @@ Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.
 - [x] Initialization
 - [ ] Resources
   - [x] buffers
+    - [x] mapping
   - [ ] textures
   - [ ] samplers
-- [ ] Binding
-  - [ ] pipeline layouts
-  - [ ] bind groups
+- [x] Binding
+  - [x] pipeline layouts
+  - [x] bind groups
 - [ ] Rendering
-- [ ] Computing
+- [x] Computing
 - [ ] Presentation
   - [ ] Windows
   - [ ] macOS
   - [ ] Linux
   - [ ] Android
+
+Basically, Firefox it at the state of running the compute samples, but can't render anything yet.
 
 All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in BugZilla.
 
