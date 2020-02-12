@@ -12,16 +12,17 @@ This page aims to track the big picture of what sections the specification is mi
   - [x] Memory model (describes the major types of memory WebGPU operates on under the hood and what guarantees we provide on their state)
   - [ ] Multi-threading (describes the sharing semantics)
   - [x] Usage rules (describes the usage rules in general and how the synchronization works)
-- [ ] Initialization
+- [x] Initialization
+  - [x] Limits
 - [ ] Resources
-  - [ ] Buffers
+  - [x] Buffers
   - [ ] Textures
   - [ ] Texture views
   - [ ] Samplers
 - [ ] Shaders
   - [ ] Language/syntax/format
   - [ ] Shader modules
-  - [ ] Bind groups and their layouts
+  - [x] Bind groups and their layouts
   - [ ] Transformations (describes what we do to shaders in order for them to execute securely)
   - [ ] Vertex shaders
   - [ ] Fragment shaders
@@ -51,4 +52,4 @@ This page aims to track the big picture of what sections the specification is mi
 - [ ] Device-generated commands (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#device-generated-commands))
 - [ ] Extension mechanism
 - [ ] Formats
-- [ ] Error handling
+- [x] Error handling
