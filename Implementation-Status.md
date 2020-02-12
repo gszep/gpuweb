@@ -35,20 +35,24 @@ Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.
 - [ ] Resources
   - [x] buffers
     - [x] mapping
-  - [ ] textures
+  - [ ] textures & views
   - [ ] samplers
 - [x] Binding
   - [x] pipeline layouts
   - [x] bind groups
 - [ ] Rendering
+  - [x] passes
+  - [ ] pipelines
 - [x] Computing
+  - [x] passes
+  - [x] pipelines
 - [ ] Presentation
   - [ ] Windows
   - [ ] macOS
   - [ ] Linux
   - [ ] Android
 
-Basically, Firefox it at the state of running the compute samples, but can't render anything yet.
+Basically, Firefox is at the state of running the compute samples, and will soon be able to render, but unable to present anything to canvas yet.
 
 All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in BugZilla.
 
@@ -63,6 +67,8 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
 ## Servo (SPIR-V compatible)
 
 Work [in progress](https://github.com/servo/servo/pull/24708) to expose WebGPU initialization behind the "dom.webgpu.enabled" pref.
+
+Servo can run the compute example, which has to be slightly modified because of the JavaScript engine limitiations.
 
 # Samples
 
