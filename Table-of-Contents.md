@@ -11,7 +11,8 @@ This page aims to track the big picture of what sections the specification is mi
   - [x] CPU and GPU timelines (describes the kinds of timelines we have in the programming model)
   - [x] Memory model (describes the major types of memory WebGPU operates on under the hood and what guarantees we provide on their state)
   - [ ] Multi-threading (describes the sharing semantics)
-  - [x] Usage rules (describes the usage rules in general and how the synchronization works)
+  - [x] Usage rules
+  - [ ] Synchronization
 - [x] Initialization
   - [x] Limits
 - [ ] Resources
@@ -32,6 +33,7 @@ This page aims to track the big picture of what sections the specification is mi
   - [ ] Render states
   - [ ] Compute states
 - [ ] Command buffers
+  - [ ] Programmable passes
   - [ ] Render passes
   - [ ] Compute passes
   - [ ] Transfers
