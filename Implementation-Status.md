@@ -1,4 +1,4 @@
-This page shows the current implementation status of the [WebGPU API spec](https://gpuweb.github.io/gpuweb/) in browsers. It also lists some resources (samples, demos) for enthusiastic web developers.
+This page shows the current implementation status of the [WebGPU API spec](https://gpuweb.github.io/gpuweb/) in browsers. It also lists some resources (samples, demos) for enthusiastic web developers. Also note the [WebGPU Shading Language spec](https://gpuweb.github.io/gpuweb/wgsl.html) that's hosted separately.
 
 The [public-gpu@w3.org](https://lists.w3.org/Archives/Public/public-gpu/) mailing list is a good place to ask questions or provide feedback on the API.
 
@@ -27,32 +27,34 @@ Compute                   |          |           |       | 👷  |   👷    |
 ## Edge
 N/A
 
-## Firefox (SPIR-V compatible)
+## Firefox
 
 Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.webgpu.enabled" pref. The implementation is based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust.
 
 - [x] Initialization
-- [ ] Resources
+- [ ] WGSL support
+- [x] Resources
   - [x] buffers
     - [x] mapping
-  - [ ] textures & views
-  - [ ] samplers
+  - [x] textures & views
+  - [x] samplers
 - [x] Binding
   - [x] pipeline layouts
   - [x] bind groups
-- [ ] Rendering
+- [x] Rendering
   - [x] passes
-  - [ ] pipelines
+  - [x] pipelines
 - [x] Computing
   - [x] passes
   - [x] pipelines
 - [ ] Presentation
+  - [ ] Raw memory (all platforms)
   - [ ] Windows
   - [ ] macOS
   - [ ] Linux
   - [ ] Android
 
-Basically, Firefox is at the state of running the compute samples, and will soon be able to render, but unable to present anything to canvas yet.
+Basically, Firefox is at the state of doing rendering and compute, but unable to present anything to screen yet.
 
 All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in BugZilla.
 
@@ -64,11 +66,13 @@ To enable WebGPU, first make sure the Develop menu is visible using `Safari` →
 
 Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=WebGPU).
 
-## Servo (SPIR-V compatible)
+## Servo
 
 Work [in progress](https://github.com/servo/servo/pull/24708) to expose WebGPU initialization behind the "dom.webgpu.enabled" pref.
 
 Servo can run the compute example, which has to be slightly modified because of the JavaScript engine limitiations.
+
+Servo can only accept binary SPIR-V for now.
 
 # Samples
 
