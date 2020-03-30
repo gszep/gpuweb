@@ -12,7 +12,7 @@ This page aims to track the big picture of what sections the specification is mi
   - [x] Memory model (describes the major types of memory WebGPU operates on under the hood and what guarantees we provide on their state)
   - [ ] Multi-threading (describes the sharing semantics)
   - [x] Usage rules
-  - [ ] Synchronization
+  - [x] Synchronization
 - [x] Initialization
   - [x] Limits
 - [ ] Resources
