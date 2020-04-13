@@ -47,14 +47,12 @@ Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.
 - [x] Computing
   - [x] passes
   - [x] pipelines
-- [ ] Presentation
-  - [ ] Raw memory (all platforms)
+- [x] Presentation
+  - [x] Raw memory (all platforms)
   - [ ] Windows
   - [ ] macOS
   - [ ] Linux
   - [ ] Android
-
-Basically, Firefox is at the state of doing rendering and compute, but unable to present anything to screen yet.
 
 All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in BugZilla.
 
