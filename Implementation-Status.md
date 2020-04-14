@@ -78,7 +78,7 @@ Servo can only accept binary SPIR-V for now.
 
 * [WebKit/Safari Demos](https://webkit.org/demos/webgpu) (uses WSL)
 
-* [wgpu-rs samples](http://joshgroves.com/gfx/wgpu/examples/) for Firefox and Chrome (uses GLSL via SPIR-V)
+* [wgpu-rs samples](http://joshgroves.com/gfx/wgpu/examples/) (WIP, expect crashes!) for Firefox and Chrome (uses GLSL via SPIR-V)
 
 * [hello-webgpu-compute.glitch.me](https://hello-webgpu-compute.glitch.me): simple demo with both the SPIR-V and WSL paths
 
