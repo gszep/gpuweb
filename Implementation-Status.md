@@ -29,7 +29,7 @@ N/A
 
 ## Firefox
 
-Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.webgpu.enabled" pref. The implementation is based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust.
+Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.webgpu.enabled" pref. Presentation to the `CanvasContext` is only available for WebRender, which is gated by "gfx.webrender.all" pref. The implementation is based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust.
 
 - [x] Initialization
 - [ ] WGSL support
