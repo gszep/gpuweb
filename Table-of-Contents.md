@@ -28,10 +28,10 @@ This page aims to track the big picture of what sections the specification is mi
   - [ ] Vertex shaders
   - [ ] Fragment shaders
   - [ ] Compute shaders
-- [ ] Pipelines
-  - [ ] Layouts
-  - [ ] Render states
-  - [ ] Compute states
+- [x] Pipelines
+  - [x] Layouts - [#724](https://github.com/gpuweb/gpuweb/pull/724)
+  - [ ] Render states - [#724](https://github.com/gpuweb/gpuweb/pull/724)
+  - [x] Compute states - [#724](https://github.com/gpuweb/gpuweb/pull/724)
 - [ ] Command buffers
   - [ ] Programmable passes
   - [ ] Render passes
