@@ -31,7 +31,7 @@ N/A
 
 Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.webgpu.enabled" pref. Presentation to the `CanvasContext` is only available for WebRender, which is gated by "gfx.webrender.all" pref. It's been shown to work on Windows 7/10, macOS, Linux (with Vulkan support), and even Android (also with Vulkan).
 
-The implementation is based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust, which in turn uses [gfx-rs] for rendering on top of Vulkan, D3D12, Metal, and potentially on D3D11 and OpenGL ES 3.0.
+The implementation is based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust, which in turn uses [gfx-rs](https://github.com/gfx-rs/gfx) for rendering on top of Vulkan, D3D12, Metal, and potentially on D3D11 and OpenGL ES 3.0.
 
 - [x] Initialization
 - [ ] WGSL support
