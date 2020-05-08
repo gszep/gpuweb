@@ -44,7 +44,6 @@
 ## Miscellaneous
 
 - The [WebKit blog post](https://webkit.org/blog/7380/next-generation-3d-graphics-on-the-web/) on the creation of the group.
-- [Secure HLSL Explainer](https://github.com/gpuweb/gpuweb/wiki/Secure-HLSL-Explainer)
 
 - Draft [WebGPU environment specification for SPIR-V](https://docs.google.com/document/d/12HItPcVy_uRpE22do9Aj-_aPA0XNLCbTBcIYA-UKvJ0/)
 
