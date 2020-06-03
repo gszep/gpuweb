@@ -40,10 +40,11 @@ A `.` is an item that should appear in the section body.
         *   [x] Devices \
             . prose: device \
             . internal object definition: device
-    *   [ ] Limits \
-        . describe limits mechanism, not actual limits
-    *   [ ] Extensions \
-        . describe extension mechanism, not actual extensions
+    *   [ ] Optional Capabilities
+        *   [ ] Limits \
+            . describe limits mechanism, not actual limits
+        *   [ ] Extensions (TODO: rename, maybe to Features?) \
+            . describe extension mechanism, not actual extensions
 *   [x] Initialization \
     . prose describing initialization \
     . high-level explanation of limits and extensions
