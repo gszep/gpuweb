@@ -109,7 +109,7 @@ A `.` is an item that should appear in the section body.
         *   Creation \
             . createView() \
             . GPUTextureViewDescriptor
-    *   [ ] Samplers \
+    *   [x] Samplers \
         . internal object definition: sampler \
         . GPUSampler
         *   Creation \
@@ -200,18 +200,18 @@ A `.` is an item that should appear in the section body.
         . prose: compute pass encoding \
         . (no internal) \
         . GPUComputePassEncoder
-        *   [ ] Beginning Compute Passes \
+        *   [x] Beginning Compute Passes \
             . beginComputePass() \
             . GPUComputePassDescriptor
         *   [ ] Commands \
             . prose: see Compute Commands
-        *   [ ] Ending Compute Passes \
+        *   [x] Ending Compute Passes \
             . endPass()
     *   [ ] Render Passes \
         . prose: render pass encoding \
         . (no internal) \
         . GPURenderPassEncoder
-        *   [ ] Beginning Render Passes \
+        *   [x] Beginning Render Passes \
             . beginRenderPass() \
             . GPURenderPassDescriptor
             *   Color Attachments
@@ -219,7 +219,7 @@ A `.` is an item that should appear in the section body.
             *   Load & Store Operations
         *   [ ] Commands \
             . prose: see Render Pass Commands and Render Commands
-        *   [ ] Ending Render Passes \
+        *   [x] Ending Render Passes \
             . endPass()
     *   [ ] Render Bundles \
         . prose: render bundle encoding \
