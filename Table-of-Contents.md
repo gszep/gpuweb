@@ -243,6 +243,11 @@ A `.` is an item that should appear in the section body.
             *   [x] pushDebugGroup()
             *   [x] popDebugGroup()
             *   [x] insertDebugMarker()
+        *   [ ] Programmable Pass Commands
+            *   [x] pushDebugGroup()
+            *   [x] popDebugGroup()
+            *   [x] insertDebugMarker()
+            *   [ ] setBindGroup()
         *   [ ] Compute Pass Commands
             *   [ ] setPipeline()
             *   [ ] dispatch()
