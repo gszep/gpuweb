@@ -27,36 +27,45 @@ Compute                   |          |           |       | 👷  |   👷    |
 ## Edge
 N/A
 
-## Firefox
+## Firefox and Servo
+
+These browser implementations are based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust, which in turn uses [gfx-rs](https://github.com/gfx-rs/gfx) for rendering on top of Vulkan, D3D12, Metal, and potentially on D3D11 and OpenGL ES 3.0.
+
+| Feature            | Firefox            | Servo              |
+| ------------------ | ------------------ | ------------------ |
+| Initialization     | :heavy_check_mark: | :heavy_check_mark: |
+| WGSL shaders       |                    |                    |
+| Resources:         |                    |                    |
+| - Buffers          | :heavy_check_mark: | :heavy_check_mark: |
+|   - mapping        | :heavy_check_mark: | :heavy_check_mark: |
+| - Textures/Views   | :heavy_check_mark: | :heavy_check_mark: |
+| - Samplers         | :heavy_check_mark: | :heavy_check_mark: |
+| Binding:           |                    |                    |
+| - Pipeline layouts | :heavy_check_mark: | :heavy_check_mark: |
+| - Bind groups      | :heavy_check_mark: | :heavy_check_mark: |
+| Rendering:         |                    |                    |
+| - Passes           | :heavy_check_mark: | :heavy_check_mark: |
+| - Pipelines        | :heavy_check_mark: | :heavy_check_mark: |
+| - Bundles          |                    | :heavy_check_mark: |
+| Computing:         |                    |                    |
+| - Passes           | :heavy_check_mark: | :heavy_check_mark: |
+| - Pipelines        | :heavy_check_mark: | :heavy_check_mark: |
+| Presentation:      |                    |                    |
+| - Fallback (slow)  | :heavy_check_mark: | :heavy_check_mark: |
+|  - Windows         |                    |                    |
+|  - macOS           |                    |                    |
+|  - Linux           |                    |                    |
+|  - Android         |                    |                    |
+
+### Firefox
 
 Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.webgpu.enabled" pref. Presentation to the `CanvasContext` is only available for WebRender, which is gated by "gfx.webrender.all" pref. It's been shown to work on Windows 7/10, macOS, Linux (with Vulkan support), and even Android (also with Vulkan).
 
-The implementation is based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust, which in turn uses [gfx-rs](https://github.com/gfx-rs/gfx) for rendering on top of Vulkan, D3D12, Metal, and potentially on D3D11 and OpenGL ES 3.0.
-
-- [x] Initialization
-- [ ] WGSL support
-- [x] Resources
-  - [x] buffers
-    - [x] mapping
-  - [x] textures & views
-  - [x] samplers
-- [x] Binding
-  - [x] pipeline layouts
-  - [x] bind groups
-- [x] Rendering
-  - [x] passes
-  - [x] pipelines
-- [x] Computing
-  - [x] passes
-  - [x] pipelines
-- [x] Presentation
-  - [x] Raw memory (all platforms)
-  - [ ] Windows
-  - [ ] macOS
-  - [ ] Linux
-  - [ ] Android
-
 All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in BugZilla.
+
+### Servo
+
+Work [in progress](https://github.com/servo/servo/projects/24), enabled by "dom.webgpu.enabled" pref.
 
 ## Safari (WHLSL compatible - In Progress)
 
@@ -65,14 +74,6 @@ Work is in progress in [Safari Technology Preview](https://developer.apple.com/s
 To enable WebGPU, first make sure the Develop menu is visible using `Safari` → `Preferences` → `Advanced` → `Show Develop menu in menu bar`. Then, in the `Develop` menu, make sure `Experimental Features` → `WebGPU` is checked. **Avoid leaving it enabled when browsing the untrusted web.**
 
 Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=WebGPU).
-
-## Servo
-
-Work [in progress](https://github.com/servo/servo/pull/24708) to expose WebGPU initialization behind the "dom.webgpu.enabled" pref.
-
-Servo can run the compute example, which has to be slightly modified because of the JavaScript engine limitiations.
-
-Servo can only accept binary SPIR-V for now.
 
 # Samples
 
