@@ -31,31 +31,35 @@ N/A
 
 These browser implementations are based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust, which in turn uses [gfx-rs](https://github.com/gfx-rs/gfx) for rendering on top of Vulkan, D3D12, Metal, and potentially on D3D11 and OpenGL ES 3.0.
 
-| Feature            | Firefox            | Servo              |
-| ------------------ | ------------------ | ------------------ |
-| Initialization     | :heavy_check_mark: | :heavy_check_mark: |
-| WGSL shaders       |                    |                    |
-| Resources:         |                    |                    |
-| - Buffers          | :heavy_check_mark: | :heavy_check_mark: |
-|   - mapping        | :heavy_check_mark: | :heavy_check_mark: |
-| - Textures/Views   | :heavy_check_mark: | :heavy_check_mark: |
-| - Samplers         | :heavy_check_mark: | :heavy_check_mark: |
-| Binding:           |                    |                    |
-| - Pipeline layouts | :heavy_check_mark: | :heavy_check_mark: |
-| - Bind groups      | :heavy_check_mark: | :heavy_check_mark: |
-| Rendering:         |                    |                    |
-| - Passes           | :heavy_check_mark: | :heavy_check_mark: |
-| - Pipelines        | :heavy_check_mark: | :heavy_check_mark: |
-| - Bundles          |                    | :heavy_check_mark: |
-| Computing:         |                    |                    |
-| - Passes           | :heavy_check_mark: | :heavy_check_mark: |
-| - Pipelines        | :heavy_check_mark: | :heavy_check_mark: |
-| Presentation:      |                    |                    |
-| - Fallback (slow)  | :heavy_check_mark: | :heavy_check_mark: |
-|  - Windows         |                    |                    |
-|  - macOS           |                    |                    |
-|  - Linux           |                    |                    |
-|  - Android         |                    |                    |
+| Feature            | wgpu               | Firefox            | Servo              |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| Initialization     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| WGSL shaders       | :construction:     |                    |
+| Error model        | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Resources:         |                    |                    |                    |
+| - Buffers          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+|   - mapping        | :heavy_check_mark: | :construction:     | :heavy_check_mark: |
+| - Textures         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+|    - views         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+|    - block formats | :heavy_check_mark: |                    | :heavy_check_mark: |
+| - Samplers         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Binding:           |                    |                    |                    |
+| - Pipeline layouts | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| - Bind groups      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| - Implicit layouts | :heavy_check_mark: |                    |                    |
+| Rendering:         |                    |                    |                    |
+| - Passes           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| - Pipelines        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| - Bundles          | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Computing:         |                    |                    |                    |
+| - Passes           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| - Pipelines        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Presentation:      |                    |                    |                    |
+| - Fallback (slow)  | :white_circle:     | :heavy_check_mark: | :heavy_check_mark: |
+|  - Windows         |                    |                    |                    |
+|  - macOS           |                    |                    |                    |
+|  - Linux           |                    |                    |                    |
+|  - Android         |                    |                    |                    |
 
 ### Firefox
 
