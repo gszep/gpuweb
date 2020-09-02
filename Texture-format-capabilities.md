@@ -35,3 +35,5 @@
 | rgba32uint | Y |  | Y | * |  | Y |
 | rgba32sint | Y |  | Y | * |  | Y |
 | rgba32float | Y |  | Y | * |  | Y |
+
+[D3D12 texture capability spreadsheets](https://drive.google.com/drive/folders/1rGOgzzVhThGtBX60bQ53rGIAclbPS0IT) (converted to Google Sheets for viewing online)
