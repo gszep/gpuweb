@@ -268,7 +268,7 @@ A `.` is an item that should appear in the section body.
             *   [ ] drawIndirect()
             *   [ ] drawIndexedIndirect()
 *   [ ] Image operations (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#textures) for example)
-    *   [ ] Texel Input Operations
+    *   [ ] Texel Input Operations - https://github.com/gpuweb/gpuweb/issues/1116
     *   [ ] Texel Output Operations
     *   [ ] Texel Coordinates \
         . (normalized/integer)
