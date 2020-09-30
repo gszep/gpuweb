@@ -75,9 +75,9 @@ to guarantee that it's seeing all of the adapters available to it. (Note that th
 arbitrarily decide what adapters are actually exposed to the webpage - so having API surface for
 adapter enumeration does not reduce the amount of fingerprinting protection the UA can provide.)
 
-**Linked Display Adapters**:
-This refers to multiple hardware adapters in SLI/Crossfire. It's an extremely niche feature and
-there are currently no plans to investigate its inclusion in WebGPU.
+**Explicit Linked Display Adapters**:
+This refers to the ability to explicitly program for multiple hardware adapters in SLI/Crossfire.
+It's an extremely niche feature, and there are currently no plans to investigate its inclusion in WebGPU.
 
 
 ## Multi-Threading (JavaScript)
