@@ -37,6 +37,13 @@ Today, this is achieved in WebGL by creating separate WebGL contexts (each from 
 
 Nothing.
 
+**Multi-Device Resource Sharing:**
+There's a possibility of some kind of sharing of resources between WebGPU devices, but for almost
+all use cases the desired result can be achieved by just using a single WebGPU device for the two
+subsystems that want to share resources, as WebGPU devices are stateless (unlike WebGL contexts).
+The remaining use case is sharing resources between devices on different adapters, which can
+probably be achieved by interop with existing Web platform mechanisms (like ImageBitmap).
+
 
 ## Multi-Adapter
 
@@ -67,6 +74,10 @@ An API will be proposed for enumerating a list of adapters. This would be the be
 to guarantee that it's seeing all of the adapters available to it. (Note that the user agent can
 arbitrarily decide what adapters are actually exposed to the webpage - so having API surface for
 adapter enumeration does not reduce the amount of fingerprinting protection the UA can provide.)
+
+**Linked Display Adapters**:
+This refers to multiple hardware adapters in SLI/Crossfire. It's an extremely niche feature and
+there are currently no plans to investigate its inclusion in WebGPU.
 
 
 ## Multi-Threading (JavaScript)
