@@ -171,7 +171,7 @@ run on the sending thread).
 
 ## Multi-Queue
 
-[Investigation](https://github.com/gpuweb/gpuweb/issues/1066).
+[Investigation](https://github.com/gpuweb/gpuweb/issues/1065).
 
 WebGPU Queues are queues of work to be executed on the actual GPU hardware.
 
