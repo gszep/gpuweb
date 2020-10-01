@@ -185,19 +185,19 @@ applied via "async compute", in which compute work is issued on a separate "comp
 fill any unused occupancy.
 
 - Some hardware has specific subsystems for non-programmable memory operations, like memory copies
-between textures and buffers (B2B/B2T/T2B/T2T) and sometimes even blit operations (with additional
-capabilities like texture scaling, texture format conversion, compressed texture format
-decompression, etc.) By enqueuing these operations separately, an application allows the system to
+between textures and buffers (B2B/B2T/T2B/T2T).
+By enqueuing these operations separately, an application allows the system to
 schedule these operations on separate hardware subsystems without creating synchronization
-bottlenecks with other subsystems.
+bottlenecks/overhead with other subsystems.
 
 WebGPU already exposes one queue object per device (`GPUDevice.defaultQueue`).
 
-**Note:** Queues do not provide GPU parallelism: all programmable GPU work is structured to be
-parallelizable across GPU cores. They also do not directly provide concurrency: it is already
+**Note:** Queues do not directly provide GPU parallelism or concurrency; they only improve
+the occupancy of available hardware on the GPU.
+All programmable GPU work is structured to be parallelizable across GPU cores, and it is already
 possible for independent work on a single queue to be interleaved or run out-of-order at the
-discretion of the hardware/driver schedulers as long as it doesn't violate ordering guarantees
-(which, in native APIs, are provided by the application via barriers).
+discretion of the hardware/driver schedulers, within the constraints of ordering guarantees
+(which, in native APIs, are implicit or provided by the application via barriers).
 
 ### What's missing?
 
