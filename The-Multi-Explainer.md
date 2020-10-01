@@ -27,7 +27,7 @@ adapter (see below), but are completely independent entities with no implicit in
 
 ### Why?
 
-A webpage may have multiple indepedent widgets/libraries running concurrently. Each of these
+A webpage may have multiple independent widgets/libraries running concurrently. Each of these
 widgets/libraries should not have to consider the possible actions of others on the same webpage
 - they want to assume their behavior has no dependence on separate work on the page.
 
@@ -136,7 +136,7 @@ also benefit significantly from these facilities.
 
 ### What's missing?
 
-A way for objects to be shared in bulk between many threads of a multi-threaded application.
+A way for objects to be shared synchronously in bulk between many threads of a multi-threaded application.
 
 <details>
 <summary>
