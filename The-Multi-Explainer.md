@@ -85,7 +85,8 @@ It's an extremely niche feature, and there are currently no plans to investigate
 [Investigation](https://github.com/gpuweb/gpuweb/issues/354#issuecomment-511616037).
 
 We say "Multi-Threading" to refer to the ability to use a single WebGPU device from multiple
-JavaScript "threads" (the main thread, dedicated workers, shared workers, etc.)
+JavaScript "threads" (the main thread, dedicated workers, shared workers, etc.) This allows
+issuing WebGPU work on a single device from multiple threads in parallel.
 
 The proposed and partially-implemented model for this is to make most WebGPU objects be sharable
 between threads, just like SharedArrayBuffer. They can be "serialized" and "deserialized" for
@@ -100,6 +101,8 @@ objects have mutable internal state:
 - Buffer mapping state
 
 These states are observable only through WebGPU function calls (submit, map, unmap, destroy).
+**Note:** Only this small amount of CPU-side state is synchronized. Resource contents exist
+purely on the GPU device itself, and are unaffected by any CPU threading.
 
 ### Why?
 
@@ -110,7 +113,10 @@ It also provides thread-level concurrency.
 ### What's missing?
 
 - Specification of shared state.
-- Implementations.
+- Implementations. For ease of implementation, some early implementations may push WebGPU
+    operations through a single message channel, resulting in some synchronization overhead
+    that slightly reduces the parallelism of work issuance from multiple threads. However,
+    there is still a significant gain because other JavaScript work still runs in parallel.
 
 
 ## Multi-Threading (Synchronous / WebAssembly)
