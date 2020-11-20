@@ -10,15 +10,15 @@ Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canar
 
 Feature/Platform          | Android  | Chrome OS | Linux | Mac | Windows |
 ------------------------- | :------: | :-------: | :---: | :-: | :-----: |
-Device                    |          |           |       | 👷  |   👷    |
-Rendering                 |          |           |       | 👷  |   👷    |
-└ Canvas                  |          |           |       | 👷  |   👷    |
-└ Textures                |          |           |       | 👷  |   👷    |
-└ Multisampling           |          |           |       | 👷  |   👷    |
-└ Dynamic Buffer Offset   |          |           |       | 👷  |   👷    |
-Compute                   |          |           |       | 👷  |   👷    |
-└ Basic Compute           |          |           |       | 👷  |   👷    |
-└ Texture Storage         |          |           |       |     |         |
+Device                    |          |           |  👷   | 👷  |   👷    |
+Rendering                 |          |           |  👷   | 👷  |   👷    |
+└ Canvas                  |          |           |  👷   | 👷  |   👷    |
+└ Textures                |          |           |  👷   | 👷  |   👷    |
+└ Multisampling           |          |           |  👷   | 👷  |   👷    |
+└ Dynamic Buffer Offset   |          |           |  👷   | 👷  |   👷    |
+Compute                   |          |           |  👷   | 👷  |   👷    |
+└ Basic Compute           |          |           |  👷   | 👷  |   👷    |
+└ Texture Storage         |          |           |  👷   | 👷  |   👷    |
 
 * Root Issue [#852089](https://bugs.chromium.org/p/chromium/issues/detail?id=852089), and blocking issues, are the authoritative reference. Search for [known bugs](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU) before filing [new bugs](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink>WebGPU).
 * As GPU sandboxing isn't implemented yet for the WebGPU API, it is possible to read GPU data for other processes. **Avoid leaving it enabled when browsing the untrusted web.**
