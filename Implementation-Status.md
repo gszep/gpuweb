@@ -34,11 +34,11 @@ These browser implementations are based on [wgpu](https://github.com/gfx-rs/wgpu
 | Feature            | wgpu               | Firefox            | Servo              |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | Initialization     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| WGSL shaders       | :construction:     |                    |
+| WGSL shaders       | :construction:     | :construction:     |                    |
 | Error model        | :heavy_check_mark: |                    | :heavy_check_mark: |
 | Resources:         |                    |                    |                    |
 | - Buffers          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-|   - mapping        | :heavy_check_mark: | :construction:     | :heavy_check_mark: |
+|   - mapping        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | - Textures         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 |    - views         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 |    - block formats | :heavy_check_mark: |                    | :heavy_check_mark: |
@@ -46,7 +46,7 @@ These browser implementations are based on [wgpu](https://github.com/gfx-rs/wgpu
 | Binding:           |                    |                    |                    |
 | - Pipeline layouts | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | - Bind groups      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| - Implicit layouts | :heavy_check_mark: |                    |                    |
+| - Implicit layouts | :heavy_check_mark: | :heavy_check_mark: |                    |
 | Rendering:         |                    |                    |                    |
 | - Passes           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | - Pipelines        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -63,7 +63,7 @@ These browser implementations are based on [wgpu](https://github.com/gfx-rs/wgpu
 
 ### Firefox
 
-Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by "dom.webgpu.enabled" pref. Presentation to the `CanvasContext` is only available for WebRender, which is gated by "gfx.webrender.all" pref. It's been shown to work on Windows 7/10, macOS, Linux (with Vulkan support), and even Android (also with Vulkan).
+Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by the "dom.webgpu.enabled" pref. It requires WebRender, which may be enabled by "gfx.webrender.all" pref if it's not already enabled by default. It's been shown to work on Windows 7/10, macOS, Linux (with Vulkan support), and even Android (also with Vulkan).
 
 All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in BugZilla.
 
