@@ -11,6 +11,9 @@
 
 ## Minutes
 
+- [2020-11-23](https://github.com/gpuweb/gpuweb/wiki/Minutes-2020-11-23)
+
+
 - [Google Drive Directory with all minutes](https://drive.google.com/drive/folders/0B6yb23j9HAmDSDNTcWM0a0lxRU0)
 - [2018-01-17](https://docs.google.com/document/d/10ecVqRUAVPUcWsILCTzyNpXWmSbjhhcXgVT7cE3x_pU)
 - [2018-01-10](https://docs.google.com/document/d/1_qAOHyO1bxeG_DL3Yvpx7u6ZT2wCWAyAGLNmWaYpKP4/)
