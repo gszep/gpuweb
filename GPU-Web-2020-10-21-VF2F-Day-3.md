@@ -174,8 +174,8 @@ Should WGSL support unicode identifiers? ([#1160](https://github.com/gpuweb/gpuw
 *   DM: Does that match array strides when we pass arrays around?
 *   DS: Yes.
 *   DN: So basically read_only becomes a type attrib and gets carried through type aliases. So you can do: \
-type RTArr = [&lt;!-- -->[stride 16]] array&lt;vec4&lt;f32>>; \
-type ro_buf = [&lt;!-- -->[read_only]] Buf;
+type RTArr = [<!-- -->[stride 16]] array&lt;vec4&lt;f32>>; \
+type ro_buf = [<!-- -->[read_only]] Buf;
 *   MM: What’s the reason for Possible 2 over putting _ro_ inside the type name.
 *   DS: How do you do that with structured buffers? The type is “buffer” so where do you put the read_only?
 *   DM: Could do struct_ro / struct_wo.
@@ -184,7 +184,7 @@ type ro_buf = [&lt;!-- -->[read_only]] Buf;
 *   JG: block_ro ?
 *   DM: I like the ability to specify access qualifiers near the type but not a suffix. It is consistent and extendable. Possible 2 doesn’t mention anything about textures
 *   DS: Textures would be the same as Possible 1.
-*   DS: We could even make [&lt;!-- -->[sampled]] and attrib too..
+*   DS: We could even make [<!-- -->[sampled]] and attrib too..
 *   DM: I think that should be part of the type. No reason to hide it from the type. They already differ in requiring texel format for storage image, vs. sampled component type for sampled image..
 *   JG: If this were an attribute on a type.. do we have type aliases?
 *   DS: Yes.
@@ -194,15 +194,15 @@ type ro_buf = [&lt;!-- -->[read_only]] Buf;
 *   DS: I was thinking read/write is default and one of ro wo limits it.
 *   DM: So you want users to get read write textures by accident? That’s an extension.
 *   DC: Default readonly?
-*   JG: How do you describe writeonly in that case? it would really be [&lt;!-- -->[write_instead]]
+*   JG: How do you describe writeonly in that case? it would really be [<!-- -->[write_instead]]
 *   DM: I was thinking like what metal has. You have the access attribute and you specify the..
 *   DS: But then you have to always provide it? what happens if you don’t.
 *   DM: Error on creation 
-*   DS: So we can do [&lt;!-- -->[readable, writable]] buffer, and if you don’t provide either it’s an error?
+*   DS: So we can do [<!-- -->[readable, writable]] buffer, and if you don’t provide either it’s an error?
 *   DN: When I think of sampled images, you can only do it in a certain way - readable. So i do think we should treat sampled different from storage. Now because we already have two different ways of handling sampled and storage textures, I think it’s ok to have a diff way to describe how buffers are accessed. I think storage textures can have explicit read, explicit write,m and one day read write. \
 For buffers I’m okay with default RW as that’s how people usually think.
 *   MM: Sounds compelling to me.
-*   DM: For WebGPU it makes a big different if something is readonly or R/W. We make different tradeoffs. I like the idea of readonly by default. If you want more, you say what you want to do. Aside from that, I was thinking [&lt;!-- -->[access(read_write)]] buf which matches metal. You have to provide some access qualifier.
+*   DM: For WebGPU it makes a big different if something is readonly or R/W. We make different tradeoffs. I like the idea of readonly by default. If you want more, you say what you want to do. Aside from that, I was thinking [<!-- -->[access(read_write)]] buf which matches metal. You have to provide some access qualifier.
 *   .. does it affect multi Q - no.
 *   DS: access(read_write) just seems like more typing.
 *   DM: But it would be specified differently. You must specify “access” vs you must say A or A/B.
@@ -219,31 +219,31 @@ For buffers I’m okay with default RW as that’s how people usually think.
 For storage textures:
     *   texture_2d&lt;read,rgba32float>
     *   texture_2d&lt;write,rgba32float>
-*    MS: If you’re going to require something for buffers, it makes sense to just have [&lt;!-- -->[read]] and [&lt;!-- -->[write]] and you need at least one.
-*   DS: So [&lt;!-- -->[access(read, write]] or [&lt;!-- -->[access(read)]]
+*    MS: If you’re going to require something for buffers, it makes sense to just have [<!-- -->[read]] and [<!-- -->[write]] and you need at least one.
+*   DS: So [<!-- -->[access(read, write]] or [<!-- -->[access(read)]]
 *   MM: Can we just accept this and see how it goes? Sampled textures by default and buffers requiring write or read.
 *    DM: Against the sampled texture by default. They’re just different and specifying it is asking for trouble for no reason. \
-"[&lt;!-- -->[read_only]] texture_1d&lt;rgba32float>" should be a different type from "texture_1d&lt;f32>", I think
+"[<!-- -->[read_only]] texture_1d&lt;rgba32float>" should be a different type from "texture_1d&lt;f32>", I think
 *   DS:
     *   var ro_tex :  texture_1d&lt;read, rgba32float>;
     *   var tex : texture_sampled_1d&lt;f32>
     *   
-    *   [&lt;!-- -->[block]] struct Buffer {
-    *     [&lt;!-- -->[offset(0)]] a : i32;
+    *   [<!-- -->[block]] struct Buffer {
+    *     [<!-- -->[offset(0)]] a : i32;
     *   };
-    *   [&lt;!-- -->[binding(0), set(0)]]
-    *   var &lt;storage> buf : [&lt;!-- -->[access(read)]] Buffer;
+    *   [<!-- -->[binding(0), set(0)]]
+    *   var &lt;storage> buf : [<!-- -->[access(read)]] Buffer;
 *    DS: Or swap this so texutre_ is sampled and storage_texture is the longer one
 *    Code snippet in chat:
     *   Dan Sinclair4:10 PM
     *   var ro_tex :  texture_storage_1d&lt;read, rgba32float>;
     *   var tex : texture_1d&lt;f32>
     *   
-    *   [&lt;!-- -->[block]] struct Buffer {
-    *     [&lt;!-- -->[offset(0)]] a : i32;
+    *   [<!-- -->[block]] struct Buffer {
+    *     [<!-- -->[offset(0)]] a : i32;
     *   };
-    *   [&lt;!-- -->[binding(0), set(0)]]
-    *   var &lt;storage> buf : [&lt;!-- -->[access(read)]] Buffer;
+    *   [<!-- -->[binding(0), set(0)]]
+    *   var &lt;storage> buf : [<!-- -->[access(read)]] Buffer;
 
 
 ## what is the initial value of a workgroup variable? ([#1137](https://github.com/gpuweb/gpuweb/issues/1137))
@@ -303,7 +303,7 @@ For storage textures:
 *   DS: \
 [location(0)]] var&lt;out(vertex), in(fragment)> frag_color : vec4&lt;f32> \
 OR \
-[&lt;!-- -->[location(0, fragment), location(1, vertex)]] var&lt;in(vertex), out(fragment)> colour : vec4&lt;f32>
+[<!-- -->[location(0, fragment), location(1, vertex)]] var&lt;in(vertex), out(fragment)> colour : vec4&lt;f32>
 *   MM: Can I try to describe another way of phrasing your proposal: \
 If I wrote a naive program, I’d have one var that’s an output from vertex and input to fragment. Your proposal says to deduplicate them.
 *   DS: Yes, but in the naive version you also need to have different names. This lets the names match up.
@@ -344,15 +344,15 @@ If I wrote a naive program, I’d have one var that’s an output from vertex an
 If we want it to be not globals, the vertex shader returns three varyings, and those need to be inputs to the fragment shader.
 *   DN: Okay, so we’re using the return of a struct value return multiple things.
     *   Example:
-        *   [&lt;!-- -->[stage(vertex)]] fn myvertexShader(
+        *   [<!-- -->[stage(vertex)]] fn myvertexShader(
 
-                [&lt;!-- -->[location(0)]] a: i32, 
-
-
-                [&lt;!-- -->[location(1)]] b:f32) 
+                [<!-- -->[location(0)]] a: i32, 
 
 
-                -> ( [&lt;!-- -->[location(0)]] outa: i32, [&lt;!-- -->[location(1)]] outb: f32) {
+                [<!-- -->[location(1)]] b:f32) 
+
+
+                -> ( [<!-- -->[location(0)]] outa: i32, [<!-- -->[location(1)]] outb: f32) {
 
 
                 outa = 2*a;
