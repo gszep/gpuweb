@@ -1,6 +1,6 @@
 # GPU for the Web Wiki
 
-[GPU for the Web Community Group](https://www.w3.org/community/gpu/)
+[GPU for the Web Community Group](https://www.w3.org/community/gpu/) and [GPU for the Web Working Group](https://www.w3.org/2020/gpu/)
 
 - [Technical Work](https://github.com/gpuweb/gpuweb)
 - [Administrivia](https://github.com/gpuweb/admin) - charters, etc
@@ -11,12 +11,66 @@
 
 ## Minutes
 
-- [2020-11-23](https://github.com/gpuweb/gpuweb/wiki/Minutes-2020-11-23)
+Also see [Google Drive Directory with raw minutes for GPU Web meetings](https://drive.google.com/drive/folders/0B6yb23j9HAmDSDNTcWM0a0lxRU0)
 
+### 2020
 
-- [Google Drive Directory with all minutes](https://drive.google.com/drive/folders/0B6yb23j9HAmDSDNTcWM0a0lxRU0)
+- [[GPU Web 2020-11-23|Minutes 2020-11-23]]
+- [[GPU Web 2020-11-16]]
+- [[GPU Web 2020-11-09]]
+- [[GPU Web 2020-11-02]]
+- [[GPU Web 2020-10-21 VF2F Day 3]]
+- [[GPU Web 2020-10-21 VF2F Day 2]]
+- [[GPU Web 2020-10-19 VF2F Day 1]]
+- [[GPU Web 2020-10-05]]
+- [[GPU Web 2020-09-28]]
+- [[GPU Web 2020-09-21]]
+- [[GPU Web 2020-09-14]]
+- [[GPU Web 2020-08-24]]
+- [[GPU Web 2020-08-17]]
+- [[GPU Web 2020-08-03]]
+- [[GPU Web 2020-07-27]]
+- [[GPU Web 2020-07-20]]
+- [[GPU Web 2020-07-13]]
+- [[GPU Web 2020-07-06]]
+- [[GPU Web 2020-06-24 VF2F Day 3]]
+- [[GPU Web 2020-06-23 VF2F Day 2]]
+- [[GPU Web 2020-06-22 VF2F Day 1]]
+- [[GPU Web 2020-06-15]]
+- [[GPU Web 2020-06-08]]
+- [[GPU Web 2020-06-01]]
+- [[GPU Web 2020-05-18]]
+- [[GPU Web 2020-05-11]]
+- [[GPU Web 2020-05-04]]
+- [[GPU Web 2020-04-27]]
+- [[GPU Web 2020-04-20]]
+- [[GPU Web 2020-04-13]]
+- [[GPU Web 2020-04-06]]
+- [[GPU Web 2020-03-30]]
+- [[GPU Web 2020-03-23]]
+- [[GPU Web 2020-03-16]]
+- [[GPU Web 2020-03-09]]
+- [[GPU Web 2020-03-02]]
+- [[GPU Web 2020-02-24]]
+- [[GPU Web 2020-02-13 Redmond F2F Day 2]]
+- [[GPU Web 2020-02-12 Redmond F2F Day 1]]
+- [[GPU Web 2020-02-03]]
+- [[GPU Web 2020-01-27]]
+- [[GPU Web 2020-01-13]]
+- [[GPU Web 2020-01-06]]
+
+### 2019
+
+- To be added...
+
+### 2018
+
+- To be added...
 - [2018-01-17](https://docs.google.com/document/d/10ecVqRUAVPUcWsILCTzyNpXWmSbjhhcXgVT7cE3x_pU)
 - [2018-01-10](https://docs.google.com/document/d/1_qAOHyO1bxeG_DL3Yvpx7u6ZT2wCWAyAGLNmWaYpKP4/)
+
+### 2017
+
 - [2017-12-13](https://docs.google.com/document/d/1wG9BRLUSw4FbpnvqieK--jTWaNnuaahtA0VBIvHdA5c/)
 - [2017-12-06](https://lists.w3.org/Archives/Public/public-gpu/2017Dec/0012.html)
 - [2017-11-29](https://lists.w3.org/Archives/Public/public-gpu/2017Dec/0001.html)
