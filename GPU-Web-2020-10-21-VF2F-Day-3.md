@@ -225,25 +225,28 @@ For storage textures:
 *    DM: Against the sampled texture by default. They’re just different and specifying it is asking for trouble for no reason. \
 "[<!-- -->[read_only]] texture_1d&lt;rgba32float>" should be a different type from "texture_1d&lt;f32>", I think
 *   DS:
-    *   var ro_tex :  texture_1d&lt;read, rgba32float>;
-    *   var tex : texture_sampled_1d&lt;f32>
-    *   
-    *   [<!-- -->[block]] struct Buffer {
-    *     [<!-- -->[offset(0)]] a : i32;
-    *   };
-    *   [<!-- -->[binding(0), set(0)]]
-    *   var &lt;storage> buf : [<!-- -->[access(read)]] Buffer;
+```
+    var ro_tex :  texture_1d&lt;read, rgba32float>;
+    var tex : texture_sampled_1d&lt;f32>
+    [[block]] struct Buffer {
+        [[offset(0)]] a : i32;
+    };
+    [[binding(0), set(0)]]
+    var &lt;storage> buf : [[access(read)]] Buffer;
+```
 *    DS: Or swap this so texutre_ is sampled and storage_texture is the longer one
 *    Code snippet in chat:
-    *   Dan Sinclair4:10 PM
-    *   var ro_tex :  texture_storage_1d&lt;read, rgba32float>;
-    *   var tex : texture_1d&lt;f32>
-    *   
-    *   [<!-- -->[block]] struct Buffer {
-    *     [<!-- -->[offset(0)]] a : i32;
-    *   };
-    *   [<!-- -->[binding(0), set(0)]]
-    *   var &lt;storage> buf : [<!-- -->[access(read)]] Buffer;
+```
+    Dan Sinclair4:10 PM
+    var ro_tex :  texture_storage_1d&lt;read, rgba32float>;
+    var tex : texture_1d&lt;f32>
+    
+    [[block]] struct Buffer {
+      [[offset(0)]] a : i32;
+    };
+    [[binding(0), set(0)]]
+    var &lt;storage> buf : [[access(read)]] Buffer;
+```
 
 
 ## what is the initial value of a workgroup variable? ([#1137](https://github.com/gpuweb/gpuweb/issues/1137))
@@ -344,31 +347,20 @@ If I wrote a naive program, I’d have one var that’s an output from vertex an
 If we want it to be not globals, the vertex shader returns three varyings, and those need to be inputs to the fragment shader.
 *   DN: Okay, so we’re using the return of a struct value return multiple things.
     *   Example:
-        *   [<!-- -->[stage(vertex)]] fn myvertexShader(
-
-                [<!-- -->[location(0)]] a: i32, 
-
-
-                [<!-- -->[location(1)]] b:f32) 
-
-
-                -> ( [<!-- -->[location(0)]] outa: i32, [<!-- -->[location(1)]] outb: f32) {
-
-
-                outa = 2*a;
-
-
-                outb = 2*b; 
-
-
-            }
-
-
-            // because this is an entry point, outa and outb are as if declared as var&lt;out>. So the are default-zero-initialized and we can read and write to them.
-
-
-            // If we think about extending this to helper functions, then after-arrow declarations are … an open question because now they might be the RHS of an assignment in the caller.
-
+```
+    [[stage(vertex)]] fn myvertexShader(
+        [[location(0)]] a: i32, 
+        [[location(1)]] b:f32) 
+    -> ( [[location(0)]] outa: i32, [[location(1)]] outb: f32) {
+            outa = 2*a;
+            outb = 2*b;
+        }
+    // because this is an entry point, outa and outb are as if declared as var&lt;out>.
+    // So they are default-zero-initialized and we can read and write to them.
+    // If we think about extending this to helper functions, then after-arrow
+    // declarations are … an open question because now they might be the RHS of an
+    // assignment in the caller.
+```
 *   DN: We could have an arrow to a list of named tuple parameters..
 *   MM: Helper functions?
 *   DS: Okay I’ll write up the struct proposal and we can discuss at the next meeting.
