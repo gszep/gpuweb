@@ -11,7 +11,10 @@
 
 ## Minutes
 
-Also see [Google Drive Directory with raw minutes for GPU Web meetings](https://drive.google.com/drive/folders/0B6yb23j9HAmDSDNTcWM0a0lxRU0)
+Also see Google Drive directories with raw minutes for:
+
+- [GPU Web meetings](https://drive.google.com/drive/folders/0B6yb23j9HAmDSDNTcWM0a0lxRU0)
+- [WGSL meetings](https://drive.google.com/drive/u/1/folders/1VWJ8tQx6lSLu3hNlNpJrZguk6vLVnoVq)
 
 ### 2020
 
