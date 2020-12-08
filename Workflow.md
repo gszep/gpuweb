@@ -6,7 +6,7 @@ We use a [Github project](https://github.com/orgs/gpuweb/projects/1) for trackin
   1. _Needs Discussion_ - An investigation or proposal has been written, and the community group needs to discuss it and come to a resolution (accepted, needs revision, etc.)
   1. _Specification_ - We have accepted one of the proposals and have a rough idea of how the change would be specified and tested. When an issue enters this stage, the assignee is potentially cleared, unless the same person wants to drive it through. Once it's picked up, the assignee works on formally describing the change in the specification. A [gpuweb](https://github.com/gpuweb/gpuweb) project PR may be linked with the main issue.
   1. _Needs Test Plan_ - We have landed the specification changes, and the assignee gets cleared again. Once it's picked up, the new assignee works on adding a test plan to support the specified change. A [cts](https://github.com/gpuweb/cts) project PR may be linked with the main issue at this stage.
-  1. _Specification Done_ - A change has been either rejected, or fully implemented in the specification. It may not have been fully tested or even planned yet, but is reflected in the test suite in enough detail (with any necessary TODOs) to ensure the tests are implemented fully, later on.
+  1. _Specification Done_ - A change has been either rejected, or fully implemented in the specification. It may not have been fully tested or even planned yet, but is reflected in the test plan in enough detail (with any necessary TODOs) to ensure the tests are implemented fully, later on.
 
 ## Linking PRs to the project
 
