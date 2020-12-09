@@ -43,8 +43,8 @@ A `.` is an item that should appear in the section body.
     *   [ ] Optional Capabilities
         *   [ ] Limits \
             . describe limits mechanism, not actual limits
-        *   [ ] Extensions (TODO: rename, maybe to Features?) \
-            . describe extension mechanism, not actual extensions
+        *   [ ] Features \
+            . describe extension mechanism, not actual features
 *   [x] Initialization \
     . prose describing initialization \
     . high-level explanation of limits and extensions
@@ -70,11 +70,7 @@ A `.` is an item that should appear in the section body.
         *   [x] writeTexture()
         *   [x] copyImageBitmapToTexture() \
             . GPUImageBitmapCopyView
-    *   [ ] Fences \
-        . internal object definition: fence \
-        . createFence \
-        . signal \
-        . GPUFenceDescriptor
+        *   [x] onSubmittedWorkDone()
 *   [ ] Resources
     *   [x] Buffers \
         . prose: buffers \
@@ -83,14 +79,13 @@ A `.` is an item that should appear in the section body.
         . GPUBuffer
         *   Creation \
             . createBuffer() \
-            . createBufferMapped() \
             . GPUBufferDescriptor
             *   Buffer Usage Flags
         *   Destruction \
             . destroy()
         *   Mapping \
-            . mapReadAsync() \
-            . mapWriteAsync() \
+            . mapAsync() \
+            . getMappedRange() \
             . unmap()
     *   [ ] Textures \
         . prose: textures and their uses, with reference to texture views \
