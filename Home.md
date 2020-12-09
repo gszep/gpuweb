@@ -6,8 +6,12 @@
 - [Administrivia](https://github.com/gpuweb/admin) - charters, etc
 - [Proposals and Experiments](https://github.com/gpuweb/gpuweb/wiki/Proposals---Experiments)
 - [Roadmap](https://github.com/gpuweb/gpuweb/wiki/Roadmap)
+- [Table of Contents](https://github.com/gpuweb/gpuweb/wiki/Table-of-Contents)
 - [Meetings](https://github.com/gpuweb/gpuweb/wiki/Meetings)
 - [Workflow](https://github.com/gpuweb/gpuweb/wiki/Workflow)
+
+<details><summary>MINUTES</summary>
+<p>
 
 ## Minutes
 
@@ -137,6 +141,8 @@ Also see Google Drive directories with raw minutes for:
 - [2017-05-31](http://www.w3.org/mid/CAGdfWNOTK5kHw_6mAx4_VmpCqk1SyXGtK-u3_zkUUyBAAp7uZw@mail.gmail.com)
 - [2017-05-24](http://www.w3.org/mid/CAGdfWNPW4uVGdBM6EPKAVTWY47dZdbz9EueLGNeAE=3HYVBtag@mail.gmail.com)
 - [2017-05-17](http://www.w3.org/mid/CAGdfWNOPxi9CUg-ejzYXP4VUbc8cRTnSM0u-fEoUAkRUPVC-Ww@mail.gmail.com)
+</p>
+</details>
 
 ## Miscellaneous
 
