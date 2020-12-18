@@ -22,6 +22,7 @@ Also see Google Drive directories with raw minutes for:
 
 ### 2020
 
+- [[GPU Web 2020-12-14|Minutes 2020-12-14]]
 - [[GPU Web 2020-12-07|Minutes 2020-12-07]]
 - [[WGSL 2020-12-01]]
 - [[WGSL 2020-11-30]]
