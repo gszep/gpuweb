@@ -53,7 +53,7 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
     *   Damyan Pepper
     *   **Greg Roth**
     *   Michael Dougherty
-    *   Rafael Cintron
+    *   **Rafael Cintron**
     *   Tex Riddell
 *   Mozilla
     *   **Dzmitry Malyshau**
