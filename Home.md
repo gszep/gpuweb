@@ -20,9 +20,13 @@ Also see Google Drive directories with raw minutes for:
 - [GPU Web meetings](https://drive.google.com/drive/folders/0B6yb23j9HAmDSDNTcWM0a0lxRU0)
 - [WGSL meetings](https://drive.google.com/drive/u/1/folders/1VWJ8tQx6lSLu3hNlNpJrZguk6vLVnoVq)
 
+### 2021
+
+- [[GPU Web 2021-01-25|Minutes 2021-01-25]]
+- [[GPU Web 2021-01-11|Minutes 2021-01-11]]
+
 ### 2020
 
-- [[GPU Web 2021-01-11|Minutes 2021-01-11]]
 - [[GPU Web 2020-12-21|Minutes 2020-12-21]]
 - [[GPU Web 2020-12-14|Minutes 2020-12-14]]
 - [[GPU Web 2020-12-07|Minutes 2020-12-07]]
