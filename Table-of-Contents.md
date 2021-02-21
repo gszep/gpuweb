@@ -21,10 +21,10 @@ A `.` is an item that should appear in the section body.
         *   [x] Internal Objects
         *   [x] WebGPU Interfaces
         *   [x] Object Descriptors
-    *   [ ] Invalid Internal Objects & Contagious Invalidity
+    *   [x] Invalid Internal Objects & Contagious Invalidity
     *   [x] Coordinate Systems \
         . (just an overview; details are throughout the spec)
-    *   [ ] Fixed-point data conversions (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#fundamentals-fixedconv) for example)
+    *   [ ] Fixed-point data conversions (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#fundamentals-fixedconv) for example) - coordinate with WGSL
     *   [ ] Programming Model
         *   [x] Timelines \
             . describes the kinds of timelines we have in the programming model
@@ -40,10 +40,10 @@ A `.` is an item that should appear in the section body.
         *   [x] Devices \
             . prose: device \
             . internal object definition: device
-    *   [ ] Optional Capabilities
-        *   [ ] Limits \
+    *   [x] Optional Capabilities
+        *   [x] Limits \
             . describe limits mechanism, not actual limits
-        *   [ ] Features \
+        *   [x] Features \
             . describe extension mechanism, not actual features
 *   [x] Initialization \
     . prose describing initialization \
@@ -149,11 +149,11 @@ A `.` is an item that should appear in the section body.
             . createRenderPipeline() \
             . GPURenderPipelineDescriptor
         *   [ ] Stages
-            *   [ ] Vertex Fetch \
+            *   [x] Vertex Fetch \
                 . vertexState
-            *   [ ] Vertex Shader \
+            *   [x] Vertex Shader \
                 . vertexStage
-            *   [ ] Primitive Assembly \
+            *   [x] Primitive Assembly \
                 . primitiveTopology
             *   [ ] Rasterization \
                 . rasterizationState
@@ -225,7 +225,7 @@ A `.` is an item that should appear in the section body.
             . GPURenderBundleEncoderDescriptor
         *   [ ] Commands \
             . prose: see Render Commands
-    *   [ ] Commands
+    *   [x] Commands
         *   [x] Non-Pass Commands: Copy
             *   [x] GPUTextureDataLayout
             *   [x] GPUBufferCopyView
@@ -238,30 +238,30 @@ A `.` is an item that should appear in the section body.
             *   [x] pushDebugGroup()
             *   [x] popDebugGroup()
             *   [x] insertDebugMarker()
-        *   [ ] Programmable Pass Commands
+        *   [x] Programmable Pass Commands
             *   [x] pushDebugGroup()
             *   [x] popDebugGroup()
             *   [x] insertDebugMarker()
-            *   [ ] setBindGroup()
-        *   [ ] Compute Pass Commands
-            *   [ ] setPipeline()
-            *   [ ] dispatch()
-            *   [ ] dispatchIndirect()
-        *   [ ] Render Pass Commands
-            *   [ ] setViewport()
-            *   [ ] setScissorRect()
-            *   [ ] setBlendColor()
-            *   [ ] setStencilReference()
-            *   [ ] executeBundles()
-        *   [ ] Render Commands \
+            *   [x] setBindGroup()
+        *   [x] Compute Pass Commands
+            *   [x] setPipeline()
+            *   [x] dispatch()
+            *   [x] dispatchIndirect()
+        *   [x] Render Pass Commands
+            *   [x] setViewport()
+            *   [x] setScissorRect()
+            *   [x] setBlendColor()
+            *   [x] setStencilReference()
+            *   [x] executeBundles()
+        *   [x] Render Commands \
             . GPURenderEncoderBase
-            *   [ ] setPipeline()
-            *   [ ] setIndexBuffer()
-            *   [ ] setVertexBuffer()
-            *   [ ] draw()
-            *   [ ] drawIndexed()
-            *   [ ] drawIndirect()
-            *   [ ] drawIndexedIndirect()
+            *   [x] setPipeline()
+            *   [x] setIndexBuffer()
+            *   [x] setVertexBuffer()
+            *   [x] draw()
+            *   [x] drawIndexed()
+            *   [x] drawIndirect()
+            *   [x] drawIndexedIndirect()
 *   [ ] Image operations (see [Vulkan](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#textures) for example)
     *   [ ] Texel Input Operations - https://github.com/gpuweb/gpuweb/issues/1116
     *   [ ] Texel Output Operations
@@ -301,9 +301,9 @@ A `.` is an item that should appear in the section body.
         . GPUDevice.onuncaptureerror \
         . GPUUncapturedErrorEvent \
         . GPUUncapturedErrorEventInit
-*   [ ] Extensions
+*   [x] Features
     *   Short section for each extension (most extension text should be inline) \
-        . define GPUExtensionName enum member \
+        . define GPUFeatureName enum member \
         . point to parts added to the rest of the spec
 *   [x] Type Definitions \
     . numeric types
@@ -317,5 +317,5 @@ A `.` is an item that should appear in the section body.
         . required extensions
     *   [ ] Texture Formats \
         . bit layouts
-        *   Capabilities \
+    *   [x] Texture format capabilities \
         . required extensions for different capabilities
