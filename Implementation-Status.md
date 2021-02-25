@@ -4,28 +4,22 @@ The [public-gpu@w3.org](https://lists.w3.org/Archives/Public/public-gpu/) mailin
 
 # Implementation Status
 
-## Chromium (SPIR-V compatible - In Progress)
+## Chromium (Chrome, Edge, etc.)
 
 Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canary](https://www.microsoftedgeinsider.com/en-us/download)
 
-Feature/Platform          | Android  | Chrome OS | Linux | Mac | Windows |
-------------------------- | :------: | :-------: | :---: | :-: | :-----: |
-Device                    |          |           |  👷   | 👷  |   👷    |
-Rendering                 |          |           |  👷   | 👷  |   👷    |
-└ Canvas                  |          |           |  👷   | 👷  |   👷    |
-└ Textures                |          |           |  👷   | 👷  |   👷    |
-└ Multisampling           |          |           |  👷   | 👷  |   👷    |
-└ Dynamic Buffer Offset   |          |           |  👷   | 👷  |   👷    |
-Compute                   |          |           |  👷   | 👷  |   👷    |
-└ Basic Compute           |          |           |  👷   | 👷  |   👷    |
-└ Texture Storage         |          |           |  👷   | 👷  |   👷    |
+| Android  | Chrome OS | Linux | Mac | Windows |
+| :------: | :-------: | :---: | :-: | :-----: |
+|          |           | 👷 Behind a flag in Dev | 👷 Behind a flag in Canary/Dev | 👷 Behind a flag in Dev |
 
-* Root Issue [#852089](https://bugs.chromium.org/p/chromium/issues/detail?id=852089), and blocking issues, are the authoritative reference. Search for [known bugs](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU) before filing [new bugs](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink>WebGPU).
-* As GPU sandboxing isn't implemented yet for the WebGPU API, it is possible to read GPU data for other processes. **Avoid leaving it enabled when browsing the untrusted web.**
+* For details, look at the
+    [Dawn bug tracker](https://crbug.com/dawn),
+    bugs under Chromium root issue [852089](https://bugs.chromium.org/p/chromium/issues/detail?id=852089),
+    and in the [Blink&gt;WebGPU component](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU).
+    Check these before filing new bugs.
+* Note Chromium currently supports SPIR-V, but support **will** be removed in favor of WGSL, which is under development.
+* As GPU sandboxing isn't fully implemented yet for the WebGPU API, it is possible to read GPU data for other processes and tabs. **Avoid leaving it enabled when browsing the untrusted web.**
 * The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled.
-
-## Edge
-N/A
 
 ## Firefox and Servo
 
@@ -71,7 +65,7 @@ All the issues and feature requests are tracked by the [Graphics: WebGPU](https:
 
 Work [in progress](https://github.com/servo/servo/projects/24), enabled by "dom.webgpu.enabled" pref.
 
-## Safari (WHLSL compatible - In Progress)
+## Safari (In Progress)
 
 Work is in progress in [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/).
 
@@ -79,7 +73,9 @@ To enable WebGPU, first make sure the Develop menu is visible using `Safari` →
 
 Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=WebGPU).
 
-# Samples
+# Materials
+
+## Samples
 
 * [webgpu-samples](https://austineng.github.io/webgpu-samples/) for Chrome and Firefox (uses GLSL via SPIR-V)
 
@@ -89,12 +85,15 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
 
 * [hello-webgpu-compute.glitch.me](https://hello-webgpu-compute.glitch.me): simple demo with both the SPIR-V and WSL paths
 
-# Articles
+## Demos
+
+* [webgpu-clustered-shading](https://github.com/toji/webgpu-clustered-shading)
+
+## Articles
 
 * [Get started with GPU Compute on the Web](https://developers.google.com/web/updates/2019/08/get-started-with-gpu-compute-on-the-web)
 
-
-# Frameworks
+## Frameworks
 
 * [Babylon.js](https://www.babylonjs.com/) (uses SPIR-V)
   * [WebGPU documentation](https://doc.babylonjs.com/extensions/webgpu)
