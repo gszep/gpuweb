@@ -118,7 +118,7 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 
 
 
-*    JG: Having trouble getting census but maybe able to push out past MVP and focus on other issues, sound find?
+*    JG: Having trouble getting consensus but maybe able to push out past MVP and focus on other issues, sound find?
 *   MM: Try for consensus?
 *   MM: Think DM has made a fairly compelling case why it’s valuable. Haven’t heard a compelling case about why to not allow this.
 *   DN: What I’ve come to understand is disconnect on when we should be able to gen lower level code from WGSL. ShaderModule or PipelineCreation. If we should put features in the language which require waiting until pipeline creation. Against that, want features to align so we can validate as soon as possible (createShaderModule). Fundamental disconnect. Comes up for extensions being per entry point or per module. Resolving that may point this in the right direction
@@ -150,7 +150,6 @@ JG: Or system with different entry points per lights and use 0 lights, so create
 *   MM: Interested in making the shader module return null? That maybe OK, could be a middle ground. You’re allowed to have this function return null, but not expose an error.
 *   JG: Would match SPIR-V.
 *   DN: Imagine that is the billion dollar webgpu bug. Expect that to trip folks up. Making a choice on what’s more likely to trip up on, and will we guide them the right way of an error vs un-usable object.
-*    
 
 
 ### [indexing is 0-based, and array size is at least 1 #1410](https://github.com/gpuweb/gpuweb/pull/1410) 
