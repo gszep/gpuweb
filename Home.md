@@ -22,6 +22,9 @@ Also see Google Drive directories with raw minutes for:
 
 ### 2021
 
+- [[GPU Web 2021-02-24 VF2F Day 3]]
+- [[GPU Web 2021-02-23 VF2F Day 2]]
+- [[GPU Web 2021-02-22 VF2F Day 1]]
 - [[GPU Web 2021-02-08|Minutes 2021-02-08]]
 - [[GPU Web 2021-02-01|Minutes 2021-02-01]]
 - [[GPU Web 2021-01-25|Minutes 2021-01-25]]
