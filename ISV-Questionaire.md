@@ -1,0 +1,2 @@
+Here is a list of questions for feedback from ISV after the first round of API evaluation:
+* how do you feel about specifying `storeOp` in every attachment? [#1376](https://github.com/gpuweb/gpuweb/issues/1376)
