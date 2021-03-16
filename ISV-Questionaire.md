@@ -3,3 +3,4 @@ Here is a list of questions for feedback from ISV after the first round of API e
 * is it OK that we auto-synchronize between dispatches in a single `GPUComputePass`?
 * are implicit pipeline layouts useful?
 * is it useful or confusing to call `getCurrentTexture()` multiple times per frame?
+* how much are the `GPURenderBundle` useful?
