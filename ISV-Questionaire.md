@@ -4,3 +4,5 @@ Here is a list of questions for feedback from ISV after the first round of API e
 * are implicit pipeline layouts useful?
 * is it useful or confusing to call `getCurrentTexture()` multiple times per frame?
 * how much are the `GPURenderBundle` useful?
+* what are the pain points when migrating from WebGL?
+  * in particular would any mechanism help convert stateful WebGL code to pipeline-creating code?
