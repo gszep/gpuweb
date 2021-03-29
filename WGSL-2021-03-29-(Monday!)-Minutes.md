@@ -123,25 +123,25 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 *   GR (later): HLSL accepts every arithmetic operation between vectors and scalars and matrices and ~~vectors~~ scalars for both DXC and FXC
 *   GR: HLSL supports bitwise ops too in all scalar with sequential types
 *   GR: and also the transposition of any and all operands
-    *   MM: Metal supports vector {*,/,+,-} scalar
-    *   MM: Metal supports scalar {*,/,+,-} vector
-    *   MM: Metal supports matrix {*,/} scalar
-    *   MM: Metal supports scalar * matrix
-    *   MM: Metal supports matrix * vector
-    *   MM: Metal supports vector * matrix
-    *   DN: on the issue, Mohammed found what GLSL supports.  [https://github.com/gpuweb/gpuweb/issues/1520#issuecomment-806004434](https://github.com/gpuweb/gpuweb/issues/1520#issuecomment-806004434) Pretty liberal mixing of scalar-vector and scalar-matrix, and  +,-,/ for matrix-matrix of same dimensions.
-    *   AB: GLSL also supports some bit-operations over these.
-    *   JG: I mainly care about arithmetic operations.
-    *   MM: Propose WGSL support the intersection of GLSL,HLSL,MSL
-    *   DM: When do we stop. What about shifts?
-    *   MM: Think the result falls out. See GLSL restrictions.
-    *   AB: GLSL supports i
-    *   DN: Small concern: Does this block us from having e.g. `1` being contextually 1i or 1.0f?
-    *   AB: GLSL does the conversion before splatting
-    *   MM: I think we have solutions here
-    *   GR: Do we want to include mat*scalar here?
-    *   MM: Probably, more for mult than div.
-    *   JG: Ok, I will write up proposal based on intersections
+*   MM: Metal supports vector {*,/,+,-} scalar
+*   MM: Metal supports scalar {*,/,+,-} vector
+*   MM: Metal supports matrix {*,/} scalar
+*   MM: Metal supports scalar * matrix
+*   MM: Metal supports matrix * vector
+*   MM: Metal supports vector * matrix
+*   DN: on the issue, Mohammed found what GLSL supports.  [https://github.com/gpuweb/gpuweb/issues/1520#issuecomment-806004434](https://github.com/gpuweb/gpuweb/issues/1520#issuecomment-806004434) Pretty liberal mixing of scalar-vector and scalar-matrix, and  +,-,/ for matrix-matrix of same dimensions.
+*   AB: GLSL also supports some bit-operations over these.
+*   JG: I mainly care about arithmetic operations.
+*   MM: Propose WGSL support the intersection of GLSL,HLSL,MSL
+*   DM: When do we stop. What about shifts?
+*   MM: Think the result falls out. See GLSL restrictions.
+*   AB: GLSL supports i
+*   DN: Small concern: Does this block us from having e.g. `1` being contextually 1i or 1.0f?
+*   AB: GLSL does the conversion before splatting
+*   MM: I think we have solutions here
+*   GR: Do we want to include mat*scalar here?
+*   MM: Probably, more for mult than div.
+*   JG: Ok, I will write up proposal based on intersections
 
 
 ### [add syntax for very short const declarations inside a function #1552](https://github.com/gpuweb/gpuweb/issues/1552)
