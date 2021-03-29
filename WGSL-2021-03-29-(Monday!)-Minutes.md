@@ -118,9 +118,9 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 
 *   E.g. `vec(x,y) * 2.0`
 *   Previously:
-*   JG: I’ll survey other shader languages to see what they have.
-*   GR: I volunteer to get the answer for HLSL.
-*   GR (later): HLSL accepts every arithmetic operation between vectors and scalars and matrices and ~~vectors~~ scalars for both DXC and FXC
+  *   JG: I’ll survey other shader languages to see what they have.
+  *   GR: I volunteer to get the answer for HLSL.
+  *   GR (later): HLSL accepts every arithmetic operation between vectors and scalars and matrices and ~~vectors~~ scalars for both DXC and FXC
 *   GR: HLSL supports bitwise ops too in all scalar with sequential types
 *   GR: and also the transposition of any and all operands
 *   MM: Metal supports vector {*,/,+,-} scalar
