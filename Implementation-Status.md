@@ -28,14 +28,14 @@ These browser implementations are based on [wgpu](https://github.com/gfx-rs/wgpu
 | Feature            | wgpu               | Firefox            | Servo              |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | Initialization     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| WGSL shaders       | :construction:     | :construction:     |                    |
+| WGSL shaders       | :heavy_check_mark: | :heavy_check_mark: |                    |
 | Error model        | :heavy_check_mark: |                    | :heavy_check_mark: |
 | Resources:         |                    |                    |                    |
 | - Buffers          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 |   - mapping        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | - Textures         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 |    - views         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-|    - block formats | :heavy_check_mark: |                    | :heavy_check_mark: |
+|    - block formats | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | - Samplers         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Binding:           |                    |                    |                    |
 | - Pipeline layouts | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -50,10 +50,15 @@ These browser implementations are based on [wgpu](https://github.com/gfx-rs/wgpu
 | - Pipelines        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Presentation:      |                    |                    |                    |
 | - Fallback (slow)  | :white_circle:     | :heavy_check_mark: | :heavy_check_mark: |
-|  - Windows         |                    |                    |                    |
-|  - macOS           |                    |                    |                    |
-|  - Linux           |                    |                    |                    |
-|  - Android         |                    |                    |                    |
+| - Windows          |                    |                    |                    |
+| - macOS            |                    |                    |                    |
+| - Linux            |                    |                    |                    |
+| - Android          |                    |                    |                    |
+| Validation:        |                    |                    |                    |
+| - Host API         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| - Shader API       | :heavy_check_mark: | :heavy_check_mark: |                    |
+| - Out of bounds    |                    |                    |                    |
+| - Uniformity       | :heavy_check_mark: | :heavy_check_mark: |                    |
 
 ### Firefox
 
