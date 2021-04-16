@@ -10,7 +10,7 @@ Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canar
 
 | Android  | Chrome OS | Linux | Mac | Windows |
 | :------: | :-------: | :---: | :-: | :-----: |
-|          |           | 👷 Behind a flag in Dev | 👷 Behind a flag in Canary/Dev | 👷 Behind a flag in Dev |
+|          |           | 👷 Behind a flag in Dev | 👷 Behind a flag in Canary/Dev | 👷 Behind a flag in Canary/Dev |
 
 * For details, look at the
     [Dawn bug tracker](https://crbug.com/dawn),
