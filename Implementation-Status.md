@@ -82,11 +82,11 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
 
 ## Samples
 
-* [webgpu-samples](https://austineng.github.io/webgpu-samples/) for Chrome and Firefox (uses GLSL via SPIR-V)
-
-* [WebKit/Safari Demos](https://webkit.org/demos/webgpu) (uses WSL)
+* [webgpu-samples](https://austineng.github.io/webgpu-samples/) for Chrome and Firefox (uses WGSL, or GLSL via SPIR-V)
 
 * [wgpu-rs samples](https://wgpu.rs) for Firefox and Chrome (uses GLSL via SPIR-V), compiled from [Rust](https://github.com/gfx-rs/wgpu-rs)
+
+* [WebKit/Safari Demos](https://webkit.org/demos/webgpu) (uses WSL)
 
 * [hello-webgpu-compute.glitch.me](https://hello-webgpu-compute.glitch.me): simple demo with both the SPIR-V and WSL paths
 
