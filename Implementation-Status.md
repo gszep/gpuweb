@@ -2,6 +2,8 @@ This page shows the current implementation status of the [WebGPU API spec](https
 
 The [public-gpu@w3.org](https://lists.w3.org/Archives/Public/public-gpu/) mailing list is a good place to ask questions or provide feedback on the API.
 
+You can also join the chat [on Matrix](https://matrix.to/#/+webgraphics:matrix.org).
+
 # Implementation Status
 
 ## Chromium (Chrome, Edge, etc.)
