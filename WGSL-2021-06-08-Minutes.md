@@ -238,7 +238,7 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 *   (DN and MM will take a closer look at our APIs)
 
 
-## [https://github.com/gpuweb/gpuweb/issues/1816](https://github.com/gpuweb/gpuweb/issues/1816) null chars in WGSL source.
+### [https://github.com/gpuweb/gpuweb/issues/1816](https://github.com/gpuweb/gpuweb/issues/1816) null chars in WGSL source.
 
 
 
