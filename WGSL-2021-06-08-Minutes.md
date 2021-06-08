@@ -250,7 +250,7 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 *   MM: Null bytes are valid but not null code points.
 *   KN: Pretty sure zero is a code point?
 *   MM: No.
-*   KN: So utf-8 has a non-zero alternative to allow zeros without null-term problems.
+*   KN: ~So utf-8 has a non-zero alternative to allow zeros without null-term problems.~ EDIT: This was wrong, only Modified UTF-8 has this.
 *   JG: USVStrings allow zero scalars, so we do accept that today at least.
 *   MM: Well, I think our grammar forbids zero chars.
 *   KN: Maybe not in comments though.
