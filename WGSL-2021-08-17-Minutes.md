@@ -2,7 +2,7 @@
 
 **🪑 Chair:** Jeff Gilbert
 
-**⌨️ Scribe:** Alan Baker
+**⌨️ Scribe:** Jeff Gilbert, Alan Baker
 
 **🗺 Location:** [meet.google.com](http://meet.google.com)
 
