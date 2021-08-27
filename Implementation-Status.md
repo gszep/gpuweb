@@ -2,7 +2,7 @@ This page shows the current implementation status of the [WebGPU API spec](https
 
 The [public-gpu@w3.org](https://lists.w3.org/Archives/Public/public-gpu/) mailing list is a good place to ask questions or provide feedback on the API.
 
-You can also join the chat [on Matrix](https://app.element.io/#/room/#WebGPU:matrix.org).
+You can also join the chat on Matrix in the "Web Graphics" Matrix Community: [#webgraphics:matrix.org](https://matrix.to/#/#webgraphics:matrix.org). The general WebGPU channel is [#WebGPU:matrix.org](https://matrix.to/#/#WebGPU:matrix.org).
 
 # Implementation Status
 
