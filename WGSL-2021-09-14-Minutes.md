@@ -169,7 +169,7 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 
 
 
-* DM: Previously we decided all depth textures had to be bound as depth bindings. This is inconvenient. Not how it’s done anywhere except Metal. Metal doesn’t have the binding types that we have.  Observed by @magicus that the porting paths on Metal, in the cases when comparison is not use, will map to regular texture, and not using depth-texture. Seems to work for everyone for now.
+* DM: Previously we decided all depth textures had to be bound as depth bindings. This is inconvenient. Not how it’s done anywhere except Metal. Metal doesn’t have the binding types that we have.  Observed by @magcius that the porting paths on Metal, in the cases when comparison is not use, will map to regular texture, and not using depth-texture. Seems to work for everyone for now.
 * AB: But that’s not documented as the valid behaviour.
 * DM: Want to layout the options
     * 1. Ask clarification from Metal: is the desired pattern supportable?
