@@ -2,7 +2,7 @@
 
 **🪑 Chair:** Jeff Gilbert
 
-**⌨️ Scribe:** 
+**⌨️ Scribe:** Myles, Jeff
 
 **🗺 Location:** [meet.google.com](http://meet.google.com)
 
