@@ -12,7 +12,7 @@ Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canar
 
 | Android  | Chrome OS | Linux | Mac | Windows |
 | :------: | :-------: | :---: | :-: | :-----: |
-|          |           | 👷 Behind a flag in Dev | 👷 Behind a flag in Canary/Dev | 👷 Behind a flag in Canary/Dev |
+|          | 👷 Behind a flag | 👷 Behind a flag | 👷 Behind a flag | 👷 Behind a flag |
 
 * For details, look at the
     [Dawn bug tracker](https://crbug.com/dawn),
@@ -21,7 +21,7 @@ Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canar
     Check these before filing new bugs.
 * Note Chromium currently supports SPIR-V, but support **will** be removed in favor of WGSL, which is under development.
 * As GPU sandboxing isn't fully implemented yet for the WebGPU API, it is possible to read GPU data for other processes and tabs. **Avoid leaving it enabled when browsing the untrusted web.**
-* The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled.
+* The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled on supported platforms. Linux experimental support requires running browser with `--enable-features=Vulkan` switch.
 
 ## Firefox and Servo
 
