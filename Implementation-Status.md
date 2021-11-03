@@ -95,6 +95,7 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
 ## Demos
 
 * [webgpu-clustered-shading](https://github.com/toji/webgpu-clustered-shading)
+* [Spookyball](https://spookyball.com/) - 3D version of "Breakout", Halloween theme.
 
 ## Articles
 
