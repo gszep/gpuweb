@@ -191,8 +191,6 @@ Also see Google Drive directories with raw minutes for:
 
 - The [WebKit blog post](https://webkit.org/blog/7380/next-generation-3d-graphics-on-the-web/) on the creation of the group.
 
-- Draft [WebGPU environment specification for SPIR-V](https://docs.google.com/document/d/12HItPcVy_uRpE22do9Aj-_aPA0XNLCbTBcIYA-UKvJ0/)
-
 NXT explainer documents:
  - [NXT "memory barriers"](https://docs.google.com/document/d/1k7lPmxP7M7MMQR4g210lNC5TPwmXCMLgKOQWNiuJxzA)
  - [NXT buffer mapping](https://docs.google.com/document/d/1HFzMMvDGHFtTgjNT0j-0SQ1fNU9R7woZ4JuNJdAXBjg/)
