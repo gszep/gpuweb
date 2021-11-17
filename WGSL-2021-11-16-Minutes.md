@@ -288,7 +288,7 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 * MM: Example: maxfloat * 1000 / 1000.
 * BC: Would suggest if you overflow the high precision internal type, then that produces a compile time error.
 * MM: Internally, Robin said 2227 proposal would have two distinct languages: operating on ideal types and concrete machine types.  Seems counterintuitive for developers and implementors.  If rule is that intermediate causes overflow is an error, that’s very different than what happens on GPU: enforces that it’s really two different kinds of arithmetic.(And hence bad)
-* BC: I don’t disagree. They are different arithmetic spaces, and that’s a good thing.  I posted about my thoughts in the issue.
+* BC: I don’t disagree they are distinct. They are different arithmetic spaces, and that’s a good thing.  I posted about my thoughts in the issue.
 
 
 ---
