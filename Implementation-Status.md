@@ -97,6 +97,7 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
 * [webgpu-clustered-shading](https://github.com/toji/webgpu-clustered-shading)
 * [Meta-balls](https://toji.github.io/webgpu-metaballs/)
 * [Spookyball](https://spookyball.com/) - 3D version of "Breakout", Halloween theme.
+* [WebGPU Playground](webgpu-playground.netlify.app) - a student project at Imperial College London. [feedback](https://forms.office.com/pages/responsepage.aspx?id=B3WJK4zudUWDC0-CZ8PTB-fvlzml-hFEprxqLaQ4CghUNUlDRzlRUFYwTVdBWlVVN1AzQzk2NjhNMS4u)
 
 ## Articles
 
