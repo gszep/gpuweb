@@ -1,4 +1,4 @@
-# WGSL 2021-12-07 (non-APAC 30m supplemental) Minutes
+# WGSL 2021-12-07 non-APAC 30m supplemental Minutes
 
 **🪑 Chair:** Kelsey (was Jeff) Gilbert
 
