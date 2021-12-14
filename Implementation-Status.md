@@ -14,7 +14,7 @@ Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canar
 | :------: | :-------: | :---: | :-: | :-----: |
 |          | 👷 Behind a flag/origin trial | 👷 Behind a flag | 👷 Behind a flag/origin trial | 👷 Behind a flag/origin trial |
 
-* A pre-release version of WebGPU is available in Chrome via [Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/118219490218475521).
+* A pre-release version of WebGPU is available in Chrome on Mac/Windows/Chrome OS, via [Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/118219490218475521).
 * For details, look at the
     [Dawn bug tracker](https://crbug.com/dawn),
     bugs under Chromium root issue [852089](https://bugs.chromium.org/p/chromium/issues/detail?id=852089),
