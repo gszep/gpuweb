@@ -26,42 +26,28 @@ Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canar
 
 ## Firefox and Servo
 
-These browser implementations are based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust, which in turn uses [gfx-rs](https://github.com/gfx-rs/gfx) for rendering on top of Vulkan, D3D12, Metal, and potentially on D3D11 and OpenGL ES 3.0.
+These browser implementations are based on [wgpu](https://github.com/gfx-rs/wgpu) project in Rust.
 
-| Feature            | wgpu               | Firefox            | Servo              |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| Initialization     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| WGSL shaders       | :heavy_check_mark: | :heavy_check_mark: |                    |
-| Error model        | :heavy_check_mark: |                    | :heavy_check_mark: |
-| Resources:         |                    |                    |                    |
-| - Buffers          | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-|   - mapping        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| - Textures         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-|    - views         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-|    - block formats | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| - Samplers         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Binding:           |                    |                    |                    |
-| - Pipeline layouts | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| - Bind groups      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| - Implicit layouts | :heavy_check_mark: | :heavy_check_mark: |                    |
-| Rendering:         |                    |                    |                    |
-| - Passes           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| - Pipelines        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| - Bundles          | :heavy_check_mark: |                    | :heavy_check_mark: |
-| Computing:         |                    |                    |                    |
-| - Passes           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| - Pipelines        | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Presentation:      |                    |                    |                    |
-| - Fallback (slow)  | :white_circle:     | :heavy_check_mark: | :heavy_check_mark: |
-| - Windows          |                    |                    |                    |
-| - macOS            |                    |                    |                    |
-| - Linux            |                    |                    |                    |
-| - Android          |                    |                    |                    |
-| Validation:        |                    |                    |                    |
-| - Host API         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| - Shader API       | :heavy_check_mark: | :heavy_check_mark: |                    |
-| - Out of bounds    |                    |                    |                    |
-| - Uniformity       | :heavy_check_mark: | :heavy_check_mark: |                    |
+Platform-independent features:
+- [x] WGSL shaders
+  - [x] validation
+  - [ ] overridable constants
+  - [ ] behavioral analysis
+  - [ ] uniformity analysis (present currently, but not up to spec)
+- [x] buffer mapping
+- [x] core features:
+  - [x] render bundles
+  - [x] compute
+- [ ] errors
+  - [x] error model
+  - [x] error scopes
+  - [ ] graceful device lost handling
+- [x] presentation
+
+| Platform-dependent features | Vulkan | D3D12 | Metal |
+| --------------------------- | ------ | ----- | ----- |
+| present surface sharing     |        |       |       |
+| bounds checks               |:heavy_check_mark: | :heavy_check_mark: (not needed) | :heavy_check_mark: (missing vertex pulling) | 
 
 ### Firefox
 
@@ -98,7 +84,7 @@ Bugs can be viewed and filed [here](https://bugs.webkit.org/buglist.cgi?bug_stat
 * [webgpu-clustered-shading](https://github.com/toji/webgpu-clustered-shading)
 * [Meta-balls](https://toji.github.io/webgpu-metaballs/)
 * [Spookyball](https://spookyball.com/) - 3D version of "Breakout", Halloween theme.
-* [WebGPU Playground](webgpu-playground.netlify.app) - a student project at Imperial College London. [feedback](https://forms.office.com/pages/responsepage.aspx?id=B3WJK4zudUWDC0-CZ8PTB-fvlzml-hFEprxqLaQ4CghUNUlDRzlRUFYwTVdBWlVVN1AzQzk2NjhNMS4u)
+* [WebGPU Playground](https://webgpu-playground.netlify.app/) - a student project at Imperial College London. [feedback](https://forms.office.com/pages/responsepage.aspx?id=B3WJK4zudUWDC0-CZ8PTB-fvlzml-hFEprxqLaQ4CghUNUlDRzlRUFYwTVdBWlVVN1AzQzk2NjhNMS4u)
 
 ## Articles
 
