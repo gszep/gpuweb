@@ -239,48 +239,37 @@ _(First break)_
 * RM: I think that’s like type checking. And I’m not sure that type checking and behavior are distinct checks.
 * MM: I do think that we are validation what authors wrote, since they did write it, and they get what they get.
 * DM: We would check validation for uniformity, but we would have to e.g. check uniformity past the point where we realize there’s e.g. a return and where dead code begins.
-* E.g. ```
-
-    return; \
-If (thread_id == 1) \
+* E.g. should be rejected:
+```
+return; 
+If (thread_id == 1) 
   control_barrier();
+``` 
 
-
-    ``` should be rejected
-
-* ```
-
-    If (thread_id == 1) { \
-  return; \
-  control_barrier(); \
+* This should be allowed:
+```
+If (thread_id == 1) { 
+  return; 
+  control_barrier(); 
 }
-
-
-    ``` this should be allowed.
+``` 
 
 * AB: As a user encountering this, I would be scratching my head.
-* I would like the same kind of thing for rejecting the first one: ``` \
-Return; \
-If (42u == 43.0) \
+* I would like the same kind of thing for rejecting the first one:
+```
+Return;
+If (42u == 43.0)
 ```
 * DN: The difference for me between value checking and behavior checking is with how e.g. uniformity analysis bleeds out of its immediate surrounds. BC said, once you get to * dead code, nothing in dead code affects behavior.
-
-        switch(thread_id) { … replace with a function body if needed, to make the point
-
-
-                default: { break;  
-
-
-                    discard;  // this should not poison the textureSample below.
-
-
-                    }
-
-
-        }
-
-
-        textureSample
+```
+switch(thread_id) { … replace with a function body if needed, to make the point
+  default: {
+    break;  
+    discard;  // this should not poison the textureSample below.
+  }
+}
+textureSample
+```
 
 * DN: Don’t want behaviour of dead code to leak out badness to beyond it. I care about this more than whether we check dead code intrinsically.
 * KG: Maybe to crystalize, maybe then “whether behavior analysis validates dead code” would fall out of a definition for the analysis. If all the edges leave, then the dead code couldn’t violate (some example of) an analysis. (I think a point DM made)
