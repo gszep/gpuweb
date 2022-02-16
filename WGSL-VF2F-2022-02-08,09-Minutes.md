@@ -517,53 +517,33 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
     * AB: Agree you have to specify which threads value is broadcast.  In the ptr version, the pointer value has to be uniform.  Helped here because you must only call this from uniform control flow so all the threads are there already.
     * MM: **This is actionable by itself, so yes, pull it out of the uniform-load issue**.
 
-[Proposal: Make ( ) optional for if, switch, loop and for #2575](https://github.com/gpuweb/gpuweb/issues/2575)
+### [Proposal: Make ( ) optional for if, switch, loop and for #2575](https://github.com/gpuweb/gpuweb/issues/2575)
 
-BC: Parens around these things don’t serve any purpose. The parens can be absorbed by the expression.  Some folks at Google expressed preference against this, from background in C.  Many modern languages don’t require this. I keep getting compilation errors.
+* BC: Parens around these things don’t serve any purpose. The parens can be absorbed by the expression.  Some folks at Google expressed preference against this, from background in C.  Many modern languages don’t require this. I keep getting compilation errors.
+* BC: The for loop is the most contentious of these.  Golang allows the form shown.  You know in the grammar when the thing is over.  Because we enforce braces.   
+* RM: Fine going either way for for loops. For if and switch, precedent of Rust shows it’s readable without the parens.
+* DM: Appreciate removing these parens is backwards compatible.  But for-loop looks weird. Would rather keep it.
+* KG: My feeling as well.
+* MM: An argument in favour of the “for” is Jim suggested having new kinds of for-loops; for those, you would not have parens.   You’d want whether parens are required to be the same for all the kids of ‘for’ loops.
+* KG: Can be backward compatible to remove them later.
+* KG: Like that it allows these to be optional.  Not so foreign to me any more. I write python too, and it’s optional there.
+* KG: The point about making it harder if we want to omit the curly-braces.  I’ve been proponent of making braces optional in the past, so a bit sad. But at least it’s the same number of characters saved.
+* MM: Might be reasonable to say you can omit the braces but only if you keep the curlies, and vice versa.
+* **_Resolved needs spec for “if” and “switch”.  Not resolved for “for”.  To revisit the “for”, make another issue._**
 
-BC: The for loop is the most contentious of these.  Golang allows the form shown.  You know in the grammar when the thing is over.  Because we enforce braces.   
+### [Reconsider adding while to the language #2578](https://github.com/gpuweb/gpuweb/issues/2578)
 
-RM: Fine going either way for for loops. For if and switch, precedent of Rust shows it’s readable without the parens.
-
-DM: Appreciate removing these parens is backwards compatible.  But for-loop looks weird. Would rather keep it.
-
-KG: My feeling as well.
-
-MM: An argument in favour of the “for” is Jim suggested having new kinds of for-loops; for those, you would not have parens.   You’d want whether parens are required to be the same for all the kids of ‘for’ loops.
-
-KG: Can be backward compatible to remove them later.
-
-KG: Like that it allows these to be optional.  Not so foreign to me any more. I write python too, and it’s optional there.
-
-KG: The point about making it harder if we want to omit the curly-braces.  I’ve been proponent of making braces optional in the past, so a bit sad. But at least it’s the same number of characters saved.
-
-MM: Might be reasonable to say you can omit the braces but only if you keep the curlies, and vice versa.
-
-**_Resolved needs spec for “if” and “switch”.  Not resolved for “for”.  To revisit the “for”, make another issue._**
-
-[Reconsider adding while to the language #2578](https://github.com/gpuweb/gpuweb/issues/2578)
-
-RM: Since prior argument long ago, we added ‘for’ as syntactic sugar. Want to repeat the pattern to give a while loop, as sugar over   for ( ; cond ; ) {  }
-
-RM: Benefit is familiarity.  Cost is small. Benefit is real.
-
-BC: In internal discussion, there were no strong feeling. My concern is having three keywords for expressing a loop.  An alternative is      loop (cond)  { }
-
-BC: Golang only has `for`, to express all these things.  It’s “the loop” of the language.  This is quite minor.  I can live with three keywords.  It’s remember what keyword maps to what kind of loop you’re dealing with.
-
-JB: Rust also has a “loop” keyword which has an infinite loop. It’s important in Rust. We have definite-assignment rule. We have type inference. Both  benefit knowing there is no exit other than a “break”.  So if you have while(true), you have to look at that condition, which is a burden. Having a syntactically specific form that has no exit is beneficial for a bunch of these analyses.  Seems we have analyses that would benefit.
-
-KG: you don’t think we will improve our analyses to recognize while(true).  Or is it something we need to teach best practice that loop { } and while(true) look like they do the same thing but they have material difference on analysis.
-
-JB: You do have to teach folks that sometimes loop is better to use.
-
-JB: It’s important to distinguish between analyses that the language guarantees will occur, and those that it could perform opportunistically. Sometimes it’s important to have a loop that is guaranteed to be infinite, independently of how smart the compiler is.
-
-AB: while is small amount of sugar on top of other things.  Seems reasonable.
-
-DN: Agree.  When we describe it in spec; prefer to see it as sugar over loop {  } Rather than two levels of sugar.
-
-**_Resolved needs spec._**
+* RM: Since prior argument long ago, we added ‘for’ as syntactic sugar. Want to repeat the pattern to give a while loop, as sugar over   for ( ; cond ; ) {  }
+* RM: Benefit is familiarity.  Cost is small. Benefit is real.
+* BC: In internal discussion, there were no strong feeling. My concern is having three keywords for expressing a loop.  An alternative is      loop (cond)  { }
+* BC: Golang only has `for`, to express all these things.  It’s “the loop” of the language.  This is quite minor.  I can live with three keywords.  It’s remember what keyword maps to what kind of loop you’re dealing with.
+* JB: Rust also has a “loop” keyword which has an infinite loop. It’s important in Rust. We have definite-assignment rule. We have type inference. Both  benefit knowing there is no exit other than a “break”.  So if you have while(true), you have to look at that condition, which is a burden. Having a syntactically specific form that has no exit is beneficial for a bunch of these analyses.  Seems we have analyses that would benefit.
+* KG: you don’t think we will improve our analyses to recognize while(true).  Or is it something we need to teach best practice that loop { } and while(true) look like they do the same thing but they have material difference on analysis.
+* JB: You do have to teach folks that sometimes loop is better to use.
+* JB: It’s important to distinguish between analyses that the language guarantees will occur, and those that it could perform opportunistically. Sometimes it’s important to have a loop that is guaranteed to be infinite, independently of how smart the compiler is.
+* AB: while is small amount of sugar on top of other things.  Seems reasonable.
+* DN: Agree.  When we describe it in spec; prefer to see it as sugar over loop {  } Rather than two levels of sugar.
+* **_Resolved needs spec._**
 
 
 ---
