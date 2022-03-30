@@ -16,7 +16,7 @@
 
 **Open Issues:** [WGSL Issues](https://github.com/gpuweb/gpuweb/issues?q=is%3Aissue+is%3Aopen+label%3Awgsl)
 
-**Todos doc: **[WGSN TODOs](https://docs.google.com/spreadsheets/d/1OnsotW_eWoWn4m9lW2-nRrOfR8gBSJ5Oqz9O-9hTDdA/edit#gid=0)
+**Todos doc: ** [WGSN TODOs](https://docs.google.com/spreadsheets/d/1OnsotW_eWoWn4m9lW2-nRrOfR8gBSJ5Oqz9O-9hTDdA/edit#gid=0)
 
 **Previous:** [2022-03-22 - WGSL - Agenda / Minutes](https://docs.google.com/document/d/1UB_e1nJZ4fni5WkRaGmj3Ynj7Y61Mr9bJHOPz6j14oQ/edit#heading=h.x5y79724c083) 
 
