@@ -22,6 +22,7 @@ Also see Google Drive directories with raw minutes for:
 
 ### 2022
 
+- [[GPU Web 2022-06-22|Minutes 2022-06-22]]
 - [[GPU Web 2022-06-15|Minutes 2022-06-15]]
 - [[GPU Web 2022-06-08|Minutes 2022-06-08]]
 - [[GPU Web 2022-06-01|Minutes 2022-06-01]]
