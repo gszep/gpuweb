@@ -36,7 +36,7 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 
 * Apple
     * Dan Glastonbury
-    * Myles C. Maxfield
+    * **Myles C. Maxfield**
 * Google
     * **Alan Baker**
     * **Antonio Maiorano**
