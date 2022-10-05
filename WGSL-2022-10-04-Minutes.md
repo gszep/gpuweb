@@ -230,8 +230,7 @@ Ben Clayton would like to present some slides covering the existing pointer rest
     * (pr) [wgsl: ban ptr-to-workgroup params to user-defined functions #3422](https://github.com/gpuweb/gpuweb/pull/3422)
     * (issue) [Tuple-like-returns proposal for function-out-params functionality #3501](https://github.com/gpuweb/gpuweb/issues/3501) 
 * Ben presented slides.
-    * (Will share once we figure out public access)
-    * 
+    * [Slides here](https://docs.google.com/presentation/d/1JH9F9U1Gc-XfrYGYcIcwtZx5JMvO-mLFwK3GNAquV74/edit?usp=sharing&resourcekey=0-Oc8BHDGlVef-aOybMsAT3w)
     * Tint patch for the pointer rewriting: [https://dawn-review.googlesource.com/c/dawn/+/103860](https://dawn-review.googlesource.com/c/dawn/+/103860) 
 * GR: Want clarification. Multiple return proposal: is that _instead _of pointers?
 * KG: Yes
