@@ -186,7 +186,7 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 * MM: It might be possible to preserve.
 * TR: There are those that want to test for e.g. nans before, while still in –fast-math. 
 * MM: So even in HLSL with fast-math, people get mileage with isnan.
-* KG: So accept this? (Yes)
+* KG:** So accept this? (Yes)**
 * MM: Also MM proposes re-adding isnan, just with a big warning
 * DN: I don’t want that
 * KG: I think I’d be ok adding things to the shadowy area that DN described earlier
@@ -195,7 +195,6 @@ WIP, the list of all the people invited to the meeting. **In bold, the people th
 * MM: Maybe we 
 * JB: Can’t nans not even reliably be detected, e.g. in Vulkan?
 * KG: I believe the idea is to detect this load+isnan chain and desugar that into a u32 load and a bit-test.
-* **(tabled for time)**
 
 
 ### [Validating maxComputeWorkgroupStorageSize #3485](https://github.com/gpuweb/gpuweb/issues/3485)
