@@ -123,7 +123,7 @@ WIP, it is the list of all the people invited to the meeting. **In bold the peop
 
 
 
-* https://drive.google.com/file/d/1Ce9H0xNEezg_ATOSzKkBGl8b6XUIpUMh/view?usp=share_link
+* Presentation: [Cocos @ GPU for the Web.pdf](https://drive.google.com/file/d/1Ce9H0xNEezg_ATOSzKkBGl8b6XUIpUMh/view?usp=share_link)
 * (HL presenting screen)
 * HL: Cocos is most popular for our 2D game engine. Now have full featured game editor with 3D and 2D rendering combined. Vulkan, Metal, now WebGPU. Support web natively. And native platforms with our native branch (not the same source code).
 * [https://preview.cocos.com/lake/](https://preview.cocos.com/lake/)
