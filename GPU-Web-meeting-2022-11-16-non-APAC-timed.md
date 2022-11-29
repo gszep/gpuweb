@@ -1,0 +1,197 @@
+# GPU Web meeting 2022-11-16 non-APAC-timed
+
+Chair: KG
+
+Scribe: KR
+
+Location: Google Meet
+
+Time: noon-1pm (America/Los_Angeles)
+
+[https://www.timeanddate.com/worldclock/fixedtime.html?msg=WebGPU+Meeting&iso=20221116T12&p1=137&ah=1](https://www.timeanddate.com/worldclock/fixedtime.html?msg=WebGPU+Meeting&iso=20221116T12&p1=137&ah=1) 
+
+
+## Attendance
+
+
+
+* Google
+    * Brandon Jones
+    * Kai Ninomiya
+    * Ken Russell
+    * Loko Kung
+    * Stephen White
+* Microsoft
+    * Rafael Cintron
+* Mozilla
+    * Erich Gubler
+    * Jim Blandy
+    * Kelsey Gilbert
+    * Teodor Tanasoaia
+
+
+# Administrivia
+
+
+
+* KG: next meeting's Nov 23 APAC. Day before US Thanksgiving. Do we have quorum?
+* KG: propose we skip it
+* (Thumbs up)
+* KG: instead, Nov 30 for next meeting. APAC timed.
+* Dec 7 - non-APAC.
+* KN: FYI I'll miss Nov 30.
+
+
+# CTS Update
+
+
+
+* KG: Firefox has a task about integrating WebGPU CTS into Firefox's CI. Were close, but had to ask Erich to update ANGLE instead. Soon. 🙂
+* KN: us too. Ben Clayton's doing work to precompute and cache shaders in shader test cases. Reduces test time for shader test cases. Have disk cache, too - can preload the cache, distribute to the shards, so they don't have to prepopulate their cache. Don't need to worry about this, but we could help you wire this up too. Dumps precomputed values into JSON, then loads them into the cache at startup.
+* JB: sounds interesting. Would like to speed up our CTS runs.
+* KN: the tests will be slow though, be aware. Not immediately sure how long they take. Probably on the order of 20 minutes unsharded. Maybe with backend validation layers enabled, which slow them down on some platforms.
+* KG: would be worried if it were ~8 hours. 🙂
+
+
+# “Tacit Resolution” [Queue](https://github.com/gpuweb/gpuweb/issues?q=label%3A%22tacit+resolution+queue%22)
+
+
+
+* KN: we'll have more items for the queue soon.
+* KG: R11B10G11 (?) issue: [https://github.com/gpuweb/gpuweb/issues/3566](https://github.com/gpuweb/gpuweb/issues/3566) 
+* BJ: Kai and I found - on Vulkan side, anything listed as color attachment can also be a resolve attachment. Comes down to how many samples are available per format. (Might be 1, but also appears # samples available is a device-level setting, not a per-texture setting.) Confused Kai and me.
+* KN: seems to be device-level parameter - here's what's guaranteed - and for a given format/usage/layout, what sample count you can use. We don't have this in GPUInfo. If device guarantees 4 samples for color attachments, in general, then it applies to everything that can be a color attachment?
+* BJ: it's strange.
+* KG: in OpenGL, there's a global MAX_SAMPLES, and per-texture values which might be lower.
+* KN: in Vulkan, we think the global value is the min supported by all formats.
+* BJ: seemed to me not the Vulkan way, but it is what the spec text suggests. Probably OK on Vulkan.
+* KG: follow-up then: for V1, we can put this in and test it. If tests fail, we can revisit.
+* KN: probably the way to go based on our understanding. Reasonably confident now.
+* KG: if anyone can put PR in testing that, would be great.
+* KN: if we resolve to do this, we'll make this editorial and get it in.
+* Agreed.
+* KN: FWIW, for D3D and Metal it's guaranteed.
+
+
+# Forbid any ‘\0’ in all string? [#3576](https://github.com/gpuweb/gpuweb/issues/3576)
+
+
+
+* KN: we can revisit if Intel has comments, but happy to resolve for now.
+* KG: if it's difficult implementation-wise, we can discuss.
+
+
+# Add HTMLImageElement and ImageData to copyExternalImageToTexture [#3430](https://github.com/gpuweb/gpuweb/pull/3430)
+
+
+
+* KG: probably tolerable for image uploads to be post-V1. OK for them to be slow. Main concern - having to go through ImageBitmaps is harder to optimize for Firefox. But we don't care about this for images as much. So probably fine.
+* KN: there are things I'd like to do eventually, but not for V1.
+* KR: agree this isn't a performance-critical code path.
+
+
+# [Naming convention for sync and async APIs #3594](https://github.com/gpuweb/gpuweb/issues/3594)
+
+
+
+* KN: think this is basically editorial. Think we don't need to change anything. WebNN advice was that if you have both sync&async versions, you should have convention - but we only have this for createPipeline, and we already have a convention. So nothing to change here.
+* KG: agree. Guidance doesn't say whether you're predominantly sync/async on an API level. It's per-method.
+* KG: do we have methods marked "async" which don't have async counterparts?
+* KN: yes. Just mapAsync. That's the main one. Others are oddities. popErrorScope - a meta-level thing. requestDevice, requestAdapter. CompilationInfo's not labeled. These all have to be async though. No possibility of having a sync version.
+* KN: mapAsync's an oddity - if had async version, wouldn't call it "map".
+* KG: consider calling mapAsync "map"?
+* KN: don't think it's worth it. We can comment here about that.
+* BJ: fwiw, it's a common pattern to use "requestX"
+    * [WebXR](https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession), [WebBluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice), [WebUSB](https://developer.mozilla.org/en-US/docs/Web/API/USB/requestDevice), and others all use this pattern for async APIs that are requesting some interface, often in a situation where failure is semi-likely.
+* KN: and those don't have sync versions, and they aren't named "async".
+
+
+# Should "mark adapters stale" be called more quickly? [#1630](https://github.com/gpuweb/gpuweb/issues/1630)
+
+
+
+* KG: last proposal - adapters would go invalid immediately after requesting device from them.
+* KN: yes. Idea - it's a one-use object. Thinking more - one use case where this could cause problems - relying on requestDevice to reject in order to test for capabilities, instead of testing what adapter exposes. Not an invalid use pattern right now - trying again over and over with different options. Have to get new adapter each time, which you can do.
+* KN: think this is fine. People will do one of those things, will only take them 10 minutes to add another requestAdapter or similar; don't need to make that use case work.
+* KG: worry that tradeoff of expiring adapters early isn't worth it. Reason why to do it - so people don't have the device explode, and go back to the adapter and make another device, and it'll work some of the time.
+* KN: that's correct.
+* KR: honestly we're seeing more customer use cases (in WebGL) with eGPUs and customers unplugging them. Think we should avoid race conditions by treating adapters as a one-use token.
+* KG: maybe be able to ask devices, what adapter was this device? Different than, save the adapter & use it later.
+* KN: we could add something to requestAdapter, "give me the same one as this other one."
+* KG: don't like that design generally. Would rather expose the right primitives. Suppose I'm satisfied with asking the device for its adapter.
+* KN: can also change it in the future so adapters live longer.
+* KG: I'm satisfied if we do that.
+* Consensus:
+    * After successful requestDevice…
+* KG: then wouldn't want people to make multiple devices and choose the one which succeeded.
+* KN: not easy to see whether a device request succeeded. You'll get a Device object regardless, have to check if it's lost.
+* BJ: maybe should be one-shot. Failure reasons during creating device: (1) bad parameters (like invalid limit), or (2) legitimate "something happened while making the request".
+* KG: then we don't have adapters, we have one-shot device factories.
+* KN: yes, they tell you what the adapter can do, and also create one.
+* BJ: there's nothing you can do uniquely with multiple devices all pointing to the same adapter. Multiple canvases - better to have single device. When we get to multithreading - you'll want different interfaces for same device, but won't be handled at the adapter level.
+* KG: only problematic use case - app wanting to configure based on adapter's functionality. Made some request to requestAdapters, and to get more devices, would have to replicate those requests. Might tell them, you should base this on per-adapter limits. Imagine something running compute, want to be able to use multiple devices - and use the same non-GPU structures / precomputed data across different devices.
+* KG: easier sell - in disabling adapters immediately after requestDevice, also adding "getAdapter" to devices. Then I have no more concerns. If you want to make things based on that adapter, have to hold onto the device.
+* KN: don't want people writing that code path. They'll already need the code path for requesting adapter, then device. Now writing new logic to get back the adapter from the device, and they'll still have to fall back.
+* KG: value is shared constraints in the common system.
+* KN: reality is you might end up with a different adapter. App will have to handle this. Precomputation will have to be invalidatable.
+* KG: something like WebCuda factory, wants to bring up devices quickly, based on the same adapter. Ability to know certain limits ahead of time is valuable.
+* KN: think they should detect that based on adapter parameters, rather than the object. They'll put together some structure of data - the best parameters they can do on that adapter - if they come up with a different result, they can recompute stuff.
+* BJ: if this is about limits - would it make more sense to have something in adapter requests, supports the same limits as this device over here? Gives you back adapter if it can.
+* KG: worry that we keep adding on new fixup APIs if we let people hold onto adapters. Penalty for holding onto adapters - we have device and adapter loss, and people may assume device loss when it's really adapter loss.
+* KN: right now spec says browser "should" expire the adapter after long enough. Idea - enforce developers to get new adapter rather than using the same one. Already can't do this.
+* KG: that's not intent I'd like to put into the spec. I would have voted against that.
+* KN: discussed long ago, don't remember.
+* KG: if intent were - requestAdapter, wait 3 hours/days, requestDevice - don't want to hold the adapter open.
+* KN: I think we can make it feel more convenient, but you'll always need these fallback paths, so you should use them all the time and keep your code less complicated. Don't want separate convenient and robust code paths.
+* KG: don't want to chip away at what's supported.
+* KR: bit confused about the use case here. If you had a device and either it was lost or you wanted to get one that was identical to it, you wouldn’t be able to share any GPU objects across those devices anyway. So not sure what “structures / precomputed data” could be reused.
+* KG: structures on the CPU.
+* BJ: if my GPU supports workgroup sizes larger than the default for example. And I've made data structures larger than the default.
+* KN: nothing about this proposal prevents apps from assuming they'll get the same adapter if they make the same request. Hopefully they check to make sure adapter they got is compatible with their precomputed data. Don't see how that's different from them assuming that they can keep using the adapter.
+* KG: imagine you make a hardware change, adds a new adapter, which browser finds more preferential for a vanilla requestAdapter call. Keep calling that and we start giving you back an adapter with different limits/features - there's no way for the API to tell you, I wanted that other adapter you gave me before.
+* KN: true. If app wants to assume it runs on a single adapter, it'll break more often. But not that much more often. Converse case: eGPU already plugged in when they started, and it got unplugged. Now they get different limits. Original adapter's gone. Have made the problem 2x as bad. Point is - I don't see how they're not going to handle this, or accept the fact that the page has to be reloaded, regardless of which API design we choose.
+* KG: feels like putting too many guardrails on something. Wonder if there isn't more solution space. If you get device loss, maybe you can't create new things on that adapter. But violates the thing I'm fighting for.
+* KN: I think it doesn't make anything simpler.
+* KG: worry about edge cases we're making impossible, and a couple of people will be upset.
+* JB: is there a risk we'll produce something we can't fix later? Can add more sophistication selection if we get customer requests. Trying to predict the future's hard.
+* KG: current shape of API - with browser reluctant to expire adapters - there's a class of things we don't want to worry about. Concern with that is people will expect people can recreate something on the same adapter when the device is lost. No way to reconcile these.
+* KN: don't want to over-index on the idea that we can make it work later, but don't think we're blocking ourselves from doing it later, and would like to know what people decide they can't build with the more limited API.
+* KG: we already have the thing that mirrors what native APIs do. Adding stricter guardrails than native APIs have.
+* KN: we can leave the spec as is, or leave it as a UA decision. Would like Chrome to implement those guardrails. Would be enough to make people aware this is a problem and guide them in a correct direction, even if they reuse adapters.
+* JB: would it be helpful if requestDevice didn't create a device if it fails, but rejects the Promise instead?
+* KN: used to be able to return null. We can change it again.
+* JB: would that clean this up?
+* KG: don't think it affects the adapter part.
+* KN: related, but not the core issue.
+* KG: will think about this more - close to thinking whatever we do is fine.
+* KN: if we get feedback, I'm happy to reconsider.
+* KR: somewhat in favor of providing synthetic device loss facilities, and start narrow, by making adapters one-time tokens.
+* KG: think in WebGL, context loss should be in core.
+* KN: we do have device.destroy(). That's core. It's not quite the same thing as synthesizing device loss, but geared at cleaning up a context. Close to synthesizing device loss. Only real difference is whether it sets a flag on the device loss event - destroyed or closed. Also, it unmaps buffers.
+* KG: loss doesn't?
+* KN: yes.
+* KG: reason we can't make these the same? What if device.destroy -> device.lose()? If you wanted to not restore it, would add expando property.
+* KN: need to double-check. Reason destroy() closes maps is to clean up. We can't close maps on other threads when we have multithreading. Don't want device loss to unmap buffers, might break the app. Want that cleanup to be explicit. Intended pattern where you can watch for device loss. Then you unmap things if you can handle it. Maybe we should provide a way to synthesize device loss that isn't destroy(). Simple - maybe parameter to destroy(). Almost the same operation.
+* KG: worth considering. If we have adapters which can stick around at all - maybe adapter loss should be something you can synthesize, too.
+* KN: if we accept the proposal we're doing now, that wouldn't do much.
+* KG: adapter.lose() could iterate through all devices it created and lose them too. That's what would happen if you remove the eGPU.
+* KN: if we made them single-use that wouldn't work anymore.
+* KG: maybe you can't use it to create devices, but can use it to destroy them. "close()" almost works well. Device might still be there, but we close the connection to it.
+* KN: I'd think of "close" as "close this adapter handle without losing this device", but bikeshedding.
+
+
+# Agenda for next meeting
+
+
+
+* Take a look at the upcoming agenda items, let's try to make progress offline.
+* Upcoming WebGPU API schedule:
+    * November 23: **no meeting due to US Thanksgiving**
+    * (US Thanksgiving, Thursday Nov 24)
+    * November 30: APAC
+    * December 07: Non-APAC
+    * December 14: APAC
+    * _December 21: _Non-APAC
+    * (Christmas Eve & Day, Sat Dec 24 & Sun Dec 25)
+    * December 28: **no meeting due to Christmas/New Year’s Day**
+    * January 04: APAC
