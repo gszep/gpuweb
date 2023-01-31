@@ -37,7 +37,7 @@ If you didn't receive a [meet.google.com](meet.google.com) invitation and plan o
 * Apple
     * Dan Glastonbury
     * Mike Wyrzykowski 
-    * Myles C. Maxfield
+    * **Myles C. Maxfield**
 * Cocos
     * Huabin Ling
     * Zeqiang Li
