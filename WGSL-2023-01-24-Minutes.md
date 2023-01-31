@@ -233,7 +233,8 @@ If you didn't receive a [meet.google.com](meet.google.com) invitation and plan o
 * BC: Don't think most folks notice. That was the goal. For the 99% you write literals and constants and it does the right thing. This was the one place I saw it do something unexpected. We're probably nit-picking at the algorithm right now.
 * BC: Generally when folks talk tint vs naga, naga doesn't do this and folks have heard that tint does it and they don't have to think about it and people like not having to pay attention.
 
-[Uniform control flow vs textures for flat interpolated varyings #3668](https://github.com/gpuweb/gpuweb/issues/3668)
+
+### [Uniform control flow vs textures for flat interpolated varyings #3668](https://github.com/gpuweb/gpuweb/issues/3668)
 
 
 
