@@ -51,10 +51,9 @@ Platform-independent features:
 
 ### Firefox
 
-Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by the "dom.webgpu.enabled" pref. It requires WebRender, which may be enabled by "gfx.webrender.all" pref if it's not already enabled by default. It's been shown to work on Windows 7/10, macOS, Linux (with Vulkan support), and even Android (also with Vulkan).
+Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by the "dom.webgpu.enabled" pref. It's been shown to work on Windows 7/10, macOS, Linux (with Vulkan support), and even Android (also with Vulkan).
 
-All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in BugZilla.
-
+All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in Bugzilla.
 ### Servo
 
 Work [in progress](https://github.com/servo/servo/projects/24), enabled by "dom.webgpu.enabled" pref.
