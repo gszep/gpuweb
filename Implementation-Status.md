@@ -12,16 +12,14 @@ Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canar
 
 | Android  | Chrome OS | Linux | Mac | Windows |
 | :------: | :-------: | :---: | :-: | :-----: |
-|          | 👷 Behind a flag/origin trial | 👷 Behind a flag | 👷 Behind a flag/origin trial | 👷 Behind a flag/origin trial |
+| 👷 Behind a flag | 113 | 👷 Behind a flag | 113 | 113 |
 
-* A pre-release version of WebGPU is available in Chrome on Mac/Windows/Chrome OS, via [Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/118219490218475521).
 * For details, look at the
     [Dawn bug tracker](https://crbug.com/dawn),
     bugs under Chromium root issue [852089](https://bugs.chromium.org/p/chromium/issues/detail?id=852089),
     and in the [Blink&gt;WebGPU component](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU).
     Check these before filing new bugs.
-* Note Chromium currently supports SPIR-V, but support **will** be removed in favor of WGSL, which is under development.
-* As GPU sandboxing isn't fully implemented yet for the WebGPU API, it is possible to read GPU data for other processes and tabs. **Avoid leaving it enabled when browsing the untrusted web.**
+* Note Chromium currently supports SPIR-V, but support **will** be removed in favor of WGSL.
 * The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled on supported platforms. Linux experimental support requires running browser with `--enable-features=Vulkan` switch.
 
 ## Firefox and Servo
