@@ -49,9 +49,10 @@ Platform-independent features:
 
 ### Firefox
 
-Work is in progress in [Nightly](https://nightly.mozilla.org/), enabled by the "dom.webgpu.enabled" pref. It's been shown to work on Windows 7/10, macOS, Linux (with Vulkan support), and even Android (also with Vulkan).
+In [Nightly](https://nightly.mozilla.org/) Firefox builds, WebGPU is enabled on Windows and Linux. For macOS and Android, users need to set the `dom.webgpu.enabled` pref to `true`.
 
-All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in Bugzilla.
+All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in Bugzilla. For more details, see the [Mozilla wiki](https://wiki.mozilla.org/Platform/GFX/WebGPU).
+
 ### Servo
 
 Work [in progress](https://github.com/servo/servo/projects/24), enabled by "dom.webgpu.enabled" pref.
