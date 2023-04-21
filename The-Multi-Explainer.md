@@ -88,21 +88,19 @@ We say "Multi-Threading" to refer to the ability to use a single WebGPU device f
 JavaScript "threads" (the main thread, dedicated workers, shared workers, etc.) This allows
 issuing WebGPU work on a single device from multiple threads in parallel.
 
-The proposed and partially-implemented model for this is to make most WebGPU objects be sharable
+The proposed model for this is to make most WebGPU objects be sharable
 between threads, just like SharedArrayBuffer. They can be "serialized" and "deserialized" for
 `postMessage`, which creates a new handle object (e.g. `GPUBuffer`) on the receiving thread
 referring to the same underlying WebGPU `buffer` object.
 
-Currently, relevant WebGPU objects have been marked as `[Serializable]`. Most of these objects
-are immutable, so the fact that they are shallow-cloned is not really observable. However, some
-objects have mutable internal state:
+Most of these objects are immutable, so the fact that they are shallow-cloned is not really
+observable. However, some objects have mutable internal state, like the buffer/texture
+"destroyed" state and buffer mapping state.
 
-- Buffer/texture "destroyed" state
-- Buffer mapping state
-
-These states are observable only through WebGPU function calls (submit, map, unmap, destroy).
-**Note:** Only this small amount of CPU-side state is synchronized. Resource contents exist
-purely on the GPU device itself, and are unaffected by any CPU threading.
+These states are observable only through WebGPU function calls (submit, map, unmap).
+**Note:** Only CPU-side state is synchronized. Resource contents exist purely on the GPU
+device itself, and accessed from queues, so they are unaffected by any CPU threading.
+Competing usage of GPU memory would be possible with multi-queue (below).
 
 ### Why?
 
@@ -117,7 +115,6 @@ It also provides thread-level concurrency.
     operations through a single message channel, resulting in some synchronization overhead
     that slightly reduces the parallelism of work issuance from multiple threads. However,
     there is still a significant gain because other JavaScript work still runs in parallel.
-
 
 ## Multi-Threading (Synchronous / WebAssembly)
 
@@ -198,12 +195,13 @@ bottlenecks/overhead with other subsystems.
 
 WebGPU already exposes one queue object per device (`GPUDevice.defaultQueue`).
 
-**Note:** Queues do not directly provide GPU parallelism or concurrency; they only improve
-the occupancy of available hardware on the GPU.
+**Note:** Queues do not directly provide GPU parallelism or concurrency.
 All programmable GPU work is structured to be parallelizable across GPU cores, and it is already
 possible for independent work on a single queue to be interleaved or run out-of-order at the
 discretion of the hardware/driver schedulers, within the constraints of ordering guarantees
 (which, in native APIs, are implicit or provided by the application via barriers).
+Multi-queue only improves the occupancy of available hardware on the GPU when the two tasks at
+the front of two queues can better occupy hardware resources than just one of the tasks would.
 
 ### What's missing?
 
