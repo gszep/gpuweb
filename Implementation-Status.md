@@ -16,14 +16,14 @@ Increased reach, other platforms, and bug fixes are ongoing.<sup>1</sup>
 
 | Android  | Chrome OS | Linux | Mac | Windows |
 | :------: | :-------: | :---: | :-: | :-----: |
-| 👷 Behind a flag<sup>2</sup> | 113 | 👷 Behind a flag<sup>2</sup> | 113 | 113 |
+| 👷 Behind a flag<sup>2</sup> | 113 | 👷 Behind a flag<sup>2,3</sup> | 113 | 113 |
 
-* <sup>1</sup> For details, look at the
-    [Dawn bug tracker](https://crbug.com/dawn),
+- <sup>1</sup> For details, look at the [Dawn bug tracker](https://crbug.com/dawn),
     bugs under Chromium root issue [852089](https://bugs.chromium.org/p/chromium/issues/detail?id=852089),
     and in the [Blink&gt;WebGPU component](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU).
     Check these before filing new bugs.
-* <sup>2</sup> The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled on these platforms. Linux experimental support requires running browser with `--enable-features=Vulkan` switch.
+- <sup>2</sup> The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled on these platforms. This flag is only available in Beta/Dev/Canary channel.
+- <sup>3</sup> Linux experimental support requires running browser with `--enable-features=Vulkan` switch.
 
 ## Firefox and Servo
 
