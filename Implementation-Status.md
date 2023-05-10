@@ -18,11 +18,11 @@ Increased reach, other platforms, and bug fixes are ongoing.<sup>1</sup>
 | :------: | :-------: | :---: | :-: | :-----: |
 | 👷 Behind a flag<sup>2</sup> | 113 | 👷 Behind a flag<sup>2,3</sup> | 113 | 113 |
 
-- <sup>1</sup> For details, look at the [Dawn bug tracker](https://crbug.com/dawn) and in the
+<sup>1</sup> For details, look at the [Dawn bug tracker](https://crbug.com/dawn) and in the
     Chromium bug tracker [Blink&gt;WebGPU component](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU).
     Search these before filing new bugs.
-- <sup>2</sup> The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled on these platforms. This flag is only available in Beta/Dev/Canary channel.
-- <sup>3</sup> Linux experimental support also requires launching the browser with `--enable-features=Vulkan,UseSkiaRenderer`.
+<br><sup>2</sup> The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled on these platforms. This flag is only available in Beta/Dev/Canary channel.
+<br><sup>3</sup> Linux experimental support also requires launching the browser with `--enable-features=Vulkan,UseSkiaRenderer`.
 
 ## Firefox and Servo
 
