@@ -8,19 +8,22 @@ You can also join the chat on Matrix in the "Web Graphics" Matrix Community: [#w
 
 ## Chromium (Chrome, Edge, etc.)
 
-Work is in progress in [Chrome Canary](http://chrome.com/canary) and [Edge Canary](https://www.microsoftedgeinsider.com/en-us/download)
+WebGPU has begun shipping to Mac/Windows/ChromeOS in **Chrome 113 and Edge 113!**
+As always, developers should develop against
+[Chrome Canary](http://chrome.com/canary) or
+[Edge Canary](https://www.microsoftedgeinsider.com/en-us/download).
+Increased reach, other platforms, and bug fixes are ongoing.<sup>1</sup>
 
 | Android  | Chrome OS | Linux | Mac | Windows |
 | :------: | :-------: | :---: | :-: | :-----: |
-| 👷 Behind a flag | 113 | 👷 Behind a flag | 113 | 113 |
+| 👷 Behind a flag<sup>2</sup> | 113 | 👷 Behind a flag<sup>2</sup> | 113 | 113 |
 
-* For details, look at the
+* <sup>1</sup> For details, look at the
     [Dawn bug tracker](https://crbug.com/dawn),
     bugs under Chromium root issue [852089](https://bugs.chromium.org/p/chromium/issues/detail?id=852089),
     and in the [Blink&gt;WebGPU component](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU).
     Check these before filing new bugs.
-* Note Chromium currently supports SPIR-V, but support **will** be removed in favor of WGSL.
-* The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled on supported platforms. Linux experimental support requires running browser with `--enable-features=Vulkan` switch.
+* <sup>2</sup> The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled on these platforms. Linux experimental support requires running browser with `--enable-features=Vulkan` switch.
 
 ## Firefox and Servo
 
