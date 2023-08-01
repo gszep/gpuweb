@@ -23,6 +23,7 @@ Also see Google Drive directories with raw minutes for:
 ### 2023
 
 
+- [[GPU Web 2023-07-26|GPU-Web-2023-07-26]]
 - [[GPU Web 2023-07-12|GPU-Web-2023-07-12]]
 - [[GPU Web 2023-06-28|GPU-Web-2023-06-28]]
 - [[GPU Web 2023-06-07|GPU-Web-2023-06-07-08-(Pacific-time)-Meeting-Minutes]]
