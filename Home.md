@@ -22,6 +22,8 @@ Also see Google Drive directories with raw minutes for:
 
 ### 2023
 
+- [[GPU Web 2023-08-30|GPU-Web-2023-08-30]]
+- [[GPU Web 2023-08-16|GPU-Web-2023-08-16]]
 - [[GPU Web 2023-08-09|GPU-Web-2023-08-09]]
 - [[GPU Web 2023-07-26|GPU-Web-2023-07-26]]
 - [[GPU Web 2023-07-12|GPU-Web-2023-07-12]]
