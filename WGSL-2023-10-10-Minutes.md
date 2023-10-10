@@ -170,8 +170,9 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 *   AB: Call to action.  Homework: Please make your own opinion known.
 
 
-#### [Simplify @builtin() notation](https://github.com/gpuweb/gpuweb/issues/4304)
+#### Simplify builtin notation
 
+[Simplify @builtin() notation](https://github.com/gpuweb/gpuweb/issues/4304)
 
 
 *   AB: Previously decided against this, happy to leave as is
@@ -179,7 +180,9 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 *   **_Agree to leave open, but not revisit soon._**
 
 
-#### [AbstractInt conversion ranking forces unfortunate compromise](https://github.com/gpuweb/gpuweb/issues/4291)
+#### AbstractInt conversion ranking
+
+[AbstractInt conversion ranking forces unfortunate compromise](https://github.com/gpuweb/gpuweb/issues/4291)
 
 
 
@@ -199,7 +202,9 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 *   _Consider resolved; let’s look at the PR._
 
 
-#### [#4312](https://github.com/gpuweb/gpuweb/pull/4312) Remove restrictions on user-defined pointer parameters
+#### Remove restrictions on pointer parameters
+
+[#4312](https://github.com/gpuweb/gpuweb/pull/4312) Remove restrictions on user-defined pointer parameters
 
 
 
@@ -225,7 +230,9 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 ## ⚖️ Discussions
 
 
-#### [DP4A](https://github.com/gpuweb/gpuweb/issues/2677)
+#### DP4A
+
+[DP4A](https://github.com/gpuweb/gpuweb/issues/2677)
 
 
 
@@ -247,7 +254,9 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 *   _Consensus to keep it as the non-accumulating form._
 
 
-#### [RW and RO Storage Textures](https://github.com/gpuweb/gpuweb/issues/3838)
+#### RW and RO storage textures
+
+[RW and RO Storage Textures](https://github.com/gpuweb/gpuweb/issues/3838)
 
 
 
