@@ -187,7 +187,7 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 
 
 *   DN: no desire to have values affect type checking
-*   JB:   Example shows it.  
+*   JB:   Example shows it.  `return bitcast<u32>(0xffffffff);`
 *    Fails because that literal doesn’t fit into i32.
 *   JB: Still would like to see a change to bitcast.  Think Bitcast should have an overload for AbstractInt to make it work if it the value fits in the target type.
 *   AB: I’m a bit on the fence on this.  Maybe wordsmithing can help.  AbstractInt is 64 bits now but could be expanded. Do you feel -1 should work the same way? Once you have all the leading 1s, is it in range or not is a question.
