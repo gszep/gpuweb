@@ -63,6 +63,8 @@ Work [in progress](https://github.com/servo/servo/projects/24), enabled by "dom.
 
 Work is in progress in [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/).
 
+It is testable via the "Develop menu" starting in Safari Technology Preview 185. See [release notes](https://www.webkit.org/blog/14885/release-notes-for-safari-technology-preview-185/). 
+
 # Materials
 
 ## Samples
