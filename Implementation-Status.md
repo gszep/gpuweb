@@ -51,7 +51,7 @@ Platform-independent features:
 
 ### Firefox
 
-In [Nightly](https://nightly.mozilla.org/) Firefox builds, WebGPU is enabled on Windows and Linux. For macOS and Android, users need to set the `dom.webgpu.enabled` pref to `true`.
+WebGPU is [enabled by default](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#webgpu_api) in [Nightly](https://nightly.mozilla.org/) Firefox builds. 
 
 All the issues and feature requests are tracked by the [Graphics: WebGPU](https://bugzilla.mozilla.org/buglist.cgi?product=Core&component=Graphics%3A%20WebGPU) component in Bugzilla. For more details, see the [Mozilla wiki](https://wiki.mozilla.org/Platform/GFX/WebGPU).
 
