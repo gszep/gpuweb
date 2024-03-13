@@ -205,7 +205,7 @@ None!
 * JS: If not written, then they are not clipped.  
 * JB: Background question: by using these clipping planes we can chop up a triangle in more ways.
 * DN: You’re adding more clipping half planes.
-* JB: Never generates anything that’s concave?
+* JB: Never generates anything that’s concave? (correct)
 
 
 ---
