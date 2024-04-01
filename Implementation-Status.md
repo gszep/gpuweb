@@ -19,7 +19,7 @@ Increased reach, other platforms, and bug fixes are ongoing.<sup>1</sup>
 | 121 | 113 | 👷 Behind a flag<sup>2</sup> | 113 | 113 |
 
 <sup>1</sup> For details, look at the [Dawn bug tracker](https://crbug.com/dawn) and in the
-    Chromium bug tracker [Blink&gt;WebGPU component](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EWebGPU).
+    Chromium bug tracker [Blink&gt;WebGPU component](https://issues.chromium.org/issues?q=component:Blink%3EWebGPU).
     Search these before filing new bugs.
 <br><sup>2</sup> The `chrome://flags/#enable-unsafe-webgpu` flag must be enabled (not `enable-webgpu-developer-features`). Linux experimental support also requires launching the browser with `--enable-features=Vulkan`.
 
