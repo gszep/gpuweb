@@ -36,7 +36,7 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 
 * Apple
     * Dan Glastonbury
-    * **Mike Wyrzykowski **
+    * **Mike Wyrzykowski**
 * Cocos
     * Huabin Ling
     * Zeqiang Li
