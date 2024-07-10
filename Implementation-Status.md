@@ -61,7 +61,7 @@ Work [in progress](https://github.com/servo/servo/projects/24), enabled by "dom.
 
 WebGPU is enabled by default in [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/).
 
-In macOS Sequoia betas it is testable via the "Develop menu". See [release notes for Safari Technology Preview 185](https://www.webkit.org/blog/14885/release-notes-for-safari-technology-preview-185/). 
+In macOS Sequoia betas it is testable via the "Feature Flags" in Safari Settings. See [release notes for Safari Technology Preview 185](https://www.webkit.org/blog/14885/release-notes-for-safari-technology-preview-185/). 
 
 In the iOS 18 betas and visionOS 2 betas, it is available via Settings -> Apps -> Safari -> Advanced -> Feature Flags -> WebGPU
 
