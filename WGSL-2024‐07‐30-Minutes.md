@@ -232,13 +232,3 @@ None!
 * 
 
 
-
-
-
-
-
-
-
-
-<!-- watermark --><div style="background-color:#FFFFFF"><p style="color:#FFFFFF; font-size: 1px">gd2md-html: xyzzy Tue Jul 30 2024</p></div>
-
