@@ -30,17 +30,6 @@ We will try to start the meeting approximately on time at 9:00am. We aim to have
 * Dinner on Day 1 is  at [Doppio Zero Mountain View](https://maps.app.goo.gl/ridGpS485yQ4w5SW6) (a short drive from 900 Alta) - cost will be covered by Google
 * Day 2 is – ([click here for your time zone](https://www.timeanddate.com/worldclock/fixedtime.html?iso=20241030T09&p1=137&ah=8)).
 
-Dinner photo:
-
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.jpg "image_tooltip")
-
-
-
 ## Tentative agenda
 
 Schedule:
@@ -1353,15 +1342,9 @@ CW: I think it would be more similar between gpu and web process negotiation. Sa
 
 
 
-    * stars = top 5 priorities as estimated by us
+* stars = top 5 priorities as estimated by us
 
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.jpg "image_tooltip")
-
+<img width="969" alt="image" src="https://github.com/user-attachments/assets/ed974411-c9df-465e-8d5c-5fed55922caf">
 
 
 
