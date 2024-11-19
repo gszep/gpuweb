@@ -1,3 +1,39 @@
+<!-- Copy and paste the converted output. -->
+
+<!-----
+
+
+
+Conversion time: 5.076 seconds.
+
+
+Using this Markdown file:
+
+1. Paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
+
+Conversion notes:
+
+* Docs to Markdown version 1.0β40
+* Tue Nov 19 2024 11:59:15 GMT-0800 (PST)
+* Source doc: 2024-11-19 WGSL - Agenda / Minutes
+
+WARNING:
+You have 5 H1 headings. You may want to use the "H1 -> H2" option to demote all headings by one level.
+
+----->
+
+
+<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 1; ALERTS: 0.</p>
+<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
+
+<p style="color: red; font-weight: bold">Links to alert messages:</p>
+<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
+
+
+
 # WGSL 2024-11-19 Minutes
 
 **🪑 Chair:** KG
@@ -143,7 +179,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 
 # ⏳ Timeboxes (until XX:20)
 
-[bool has 4 byte size and alignment #4972](https://github.com/gpuweb/gpuweb/issues/4972)
+
+### [bool has 4 byte size and alignment #4972](https://github.com/gpuweb/gpuweb/issues/4972)
 
 
 
@@ -162,7 +199,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 * DN: Ok
 * **Resolved: Agreed with JB’s note.**
 
-[Does WGSL intentionally permit duplicate global diagnostic filters? · Issue #4976](https://github.com/gpuweb/gpuweb/issues/4976)
+
+### [Does WGSL intentionally permit duplicate global diagnostic filters? · Issue #4976](https://github.com/gpuweb/gpuweb/issues/4976)
 
 
 
@@ -170,7 +208,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 * JB : Happy to close this, since my q was answered. No action necessary.
 * **Resolved: Closed**
 
-[Texel buffer proposal #4912](https://github.com/gpuweb/gpuweb/pull/4912)
+
+### [Texel buffer proposal #4912](https://github.com/gpuweb/gpuweb/pull/4912)
 
 
 
@@ -182,7 +221,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 * JB: +1
 * **Resolved: Land as proposal**
 
-[WIP: Add subgroups feature #4963](https://github.com/gpuweb/gpuweb/pull/4963)
+
+### [WIP: Add subgroups feature #4963](https://github.com/gpuweb/gpuweb/pull/4963)
 
 
 
@@ -197,7 +237,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 
 # ⚖️ Discussions
 
-[wgsl: @align(n) must divide required-align-of, for all structs #4978](https://github.com/gpuweb/gpuweb/pull/4978)
+
+### [wgsl: @align(n) must divide required-align-of, for all structs #4978](https://github.com/gpuweb/gpuweb/pull/4978)
 
 
 
@@ -208,7 +249,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 * JB,MW: +1
 * **Resolved: Accepted**.
 
-[Plainly state alignment requirement for scalars and vectors #4965](https://github.com/gpuweb/gpuweb/pull/4965)
+
+### [Plainly state alignment requirement for scalars and vectors #4965](https://github.com/gpuweb/gpuweb/pull/4965)
 
 
 
@@ -219,7 +261,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 * DN: Yes
 * **Resolved: closed**
 
-[enhancement: uniform buffer can use standard layout · Issue #4973](https://github.com/gpuweb/gpuweb/issues/4973)
+
+### [enhancement: uniform buffer can use standard layout · Issue #4973](https://github.com/gpuweb/gpuweb/issues/4973)
 
 
 
@@ -230,7 +273,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 * DN: This was M1 to discuss it, but should be M2 or later for implementation. Just wanted to discuss early.
 * **KG moved to M2**
 
-[smoothstep: please remove error check when edge0 > edge1 for compile-time constants · Issue #4900](https://github.com/gpuweb/gpuweb/issues/4900)
+
+### [smoothstep: please remove error check when edge0 > edge1 for compile-time constants · Issue #4900](https://github.com/gpuweb/gpuweb/issues/4900)
 
 
 
@@ -245,7 +289,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 * DN: Well… If other people are happy enough to just always polyfill, I guess I’m ok with that.
 * **Resolved: Expand the domain, both for runtime and for constant. (keeping const-time compile error for domain errors, e.g. low==high)**
 
-[Proposal: fully explicit, non-exclusive "auto" layouts in WGSL (without createPipelineLayout) · Issue #4957](https://github.com/gpuweb/gpuweb/issues/4957)
+
+### [Proposal: fully explicit, non-exclusive "auto" layouts in WGSL (without createPipelineLayout) · Issue #4957](https://github.com/gpuweb/gpuweb/issues/4957)
 
 
 
@@ -260,7 +305,8 @@ If you didn't receive a [meet.google.com](http://meet.google.com) invitation and
 * ds: It sounds like JSP is asking for declaration in the @interface to count as static-use for the purposes of auto-layout. 
 * **(no resolution today)**
 
-[Proposal: "auto" layout algorithm should be able to generate any layout · Issue #4956](https://github.com/gpuweb/gpuweb/issues/4956)
+
+### [Proposal: "auto" layout algorithm should be able to generate any layout · Issue #4956](https://github.com/gpuweb/gpuweb/issues/4956)
 
 
 
