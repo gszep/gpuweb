@@ -702,9 +702,6 @@ Nerding:
      Snapshot at https://github.com/dneto0/spirv-samples 
      (Sorry, it's stale now)
 
-```
-
-
     * DN: Talk about translation of spirv into WGSL. Developed this from the start. TInt can do Vulkan 1.1 spirv 1.3 to WGSL. Onramp from existing VUlkan apps to WebGPU. Think this is very important. Used by Unity. They have helped harden this flow, and we're super glad someone is using it and it works for them. It's not complete, it's only for WGSL features and we don't do extensive polyfills. Won't do combined image samplers. Not officially supported production flow but it's pretty good. First job of tint is WGSL -> other things so this is lower priority but it's pretty good. Hope in 2025 we're willing to advertise. 
     * DN: `glslc a.comp -o a.spv`
         * `tint --format wgsl a.spv`
